@@ -2,7 +2,30 @@ import { motion } from "framer-motion";
 import Lottie from "react-lottie";
 import teamWorkAnimationLottie from "../../../assets/lottie/business-team.json";
 
-const HeroSection = () => {
+const Text = {
+  pt: {
+    title: {
+      first: "Não só um",
+      last: "Desenvolvedor Web",
+    },
+    description: `Desenvolver é só uma parte do processo, devemos entender claramente as
+    dores do usuário final e manter um time unido com um propósito único
+    para entregar excelência.`,
+    button: "Me Contate",
+  },
+  en: {
+    title: {
+      first: "Not just a",
+      last: "Web Developer",
+    },
+    description: `Developing is just a part of the process, we must clearly understand
+    the pain of the end user and keep a team together with a single
+    purpose to deliver excellence.`,
+    button: "Contact me",
+  },
+} as const;
+
+const HeroSection = ({ lang }: { lang: keyof typeof Text }) => {
   return (
     <section
       id="hero"
@@ -18,7 +41,7 @@ const HeroSection = () => {
           }}
           className="text-3xl sm:text-5xl"
         >
-          Não só um <strong>Desenvolvedor Web</strong>
+          {Text[lang].title.first} <strong>{Text[lang].title.last}</strong>
         </motion.h1>
 
         <motion.p
@@ -30,9 +53,7 @@ const HeroSection = () => {
           }}
           className="max-w-lg mt-8 text-md sm:text-lg"
         >
-          Desenvolver é só uma parte do processo, devemos entender claramente as
-          dores do usuário final e manter um time unido com um propósito único
-          para entregar excelência.
+          {Text[lang].description}
         </motion.p>
         <motion.button
           initial={{ y: 25, opacity: 0 }}
@@ -43,7 +64,7 @@ const HeroSection = () => {
           }}
           className="cursor-pointer p-2 bg-tertiary rounded-md mt-8 sm:text-lg"
         >
-          <a href="#contact">Me Contate</a>
+          <a href="#contact">{Text[lang].button}</a>
         </motion.button>
       </div>
       <div className="absolute bottom-0 right-0 opacity-30 flex justify-end">

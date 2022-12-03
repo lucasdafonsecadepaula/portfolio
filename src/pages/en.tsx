@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Footer from "../components/Footer/en";
-import Header from "../components/Header/en";
-import AboutSection from "../components/Section/About/en";
-import ContactSection from "../components/Section/Contact/en";
-import HeroSection from "../components/Section/Hero/en";
-import ProjectsSection from "../components/Section/Projects/en";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import AboutSection from "../components/Section/About";
+import ContactSection from "../components/Section/Contact";
+import HeroSection from "../components/Section/Hero";
+import ProjectsSection from "../components/Section/Projects";
 
 export default function Home() {
   return (
@@ -12,19 +12,20 @@ export default function Home() {
       <Head>
         <title>Lucas de Paula</title>
         <meta name="description" content="Lucas de Paula, desenvolvedor web" />
+        <meta name="keywords" content="lucasdafonsecadepaula" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <Header lang="en" />
 
       <main className="">
-        <HeroSection />
-        <AboutSection />
-        <ProjectsSection />
-        <ContactSection />
+        <HeroSection lang="en" />
+        <AboutSection lang="en" />
+        <ProjectsSection lang="en" />
+        <ContactSection lang="en" />
       </main>
 
-      <Footer />
+      <Footer lang="en" />
     </div>
   );
 }

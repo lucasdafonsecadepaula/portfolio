@@ -15,16 +15,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <Header lang="pt" />
 
       <main className="">
-        <HeroSection />
-        <AboutSection />
-        <ProjectsSection />
-        <ContactSection />
+        <HeroSection lang="pt" />
+        <AboutSection lang="pt" />
+        <ProjectsSection lang="pt" />
+        <ContactSection lang="pt" />
       </main>
 
-      <Footer />
+      <Footer lang="pt" />
     </div>
   );
 }

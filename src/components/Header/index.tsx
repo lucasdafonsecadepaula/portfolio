@@ -1,9 +1,27 @@
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GrClose } from "react-icons/gr";
+import BrazilianFlag from "../icons/BrazilianFlag";
 import EnglishFlag from "../icons/EnglishFlag";
 
-const Header = () => {
+const Text = {
+  pt: {
+    language: "English",
+    flag: <EnglishFlag />,
+    about: "Sobre",
+    projects: "Projetos",
+    contact: "Contato",
+  },
+  en: {
+    language: "Português",
+    flag: <BrazilianFlag />,
+    about: "About",
+    projects: "Projects",
+    contact: "Contact",
+  },
+} as const;
+
+const Header = ({ lang }: { lang: keyof typeof Text }) => {
   return (
     <header className="z-20 flex justify-between fixed top-0 py-3 w-full bg-primary drop-shadow-2xl items-center lg:px-40 border-b-[1px]">
       <div>
@@ -29,18 +47,18 @@ const Header = () => {
               href="/en"
               className="flex items-center gap-2 cursor-pointe p-2"
             >
-              English
-              <EnglishFlag />
+              {Text[lang].language}
+              {Text[lang].flag}
             </Link>
           </li>
           <li>
             <a href="#about" className="cursor-pointer p-2">
-              Sobre
+              {Text[lang].about}
             </a>
           </li>
           <li>
             <a href="#projects" className="cursor-pointer p-2">
-              Projetos
+              {Text[lang].projects}
             </a>
           </li>
         </ul>
@@ -48,7 +66,7 @@ const Header = () => {
           href="#contact"
           className="cursor-pointer p-2 bg-tertiary rounded-md order-1"
         >
-          Contato
+          {Text[lang].contact}
         </a>
       </div>
     </header>
