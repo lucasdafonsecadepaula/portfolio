@@ -17,7 +17,7 @@ export default function Home() {
 
       <Header lang="pt" />
 
-      <main className="">
+      <main>
         <HeroSection lang="pt" />
         <AboutSection lang="pt" />
         <ProjectsSection lang="pt" />

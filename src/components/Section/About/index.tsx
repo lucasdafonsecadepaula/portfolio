@@ -1,3 +1,5 @@
+import classNames from "classnames";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import meJpg from "../../../../public/me-3.png";
 
@@ -63,15 +65,35 @@ const Text = {
     with this duo.`,
   },
 } as const;
+
 const AboutSection = ({ lang }: { lang: keyof typeof Text }) => {
+  const cardsClassName = classNames(
+    "flex flex-col items-center bg-white text-black",
+    "rounded-md gap-2 p-4 max-w-sm flex-1 drop-shadow-2xl",
+    "hover:scale-[1.05] transition ease-in-out"
+  );
   return (
     <section id="about" className="flex flex-col items-center p-8">
-      <div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { duration: 1 } }}
+        viewport={{ once: true }}
+      >
         <h2 className="text-4xl text-center font-bold mb-16">
           {Text[lang].title}
         </h2>
-      </div>
-      <div className="flex flex-col items-center rounded-md text-black bg-gradient-to-b from-[#FFF] to-[#FFF] sm:flex-row drop-shadow-2xl">
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+        viewport={{ once: true }}
+        className={classNames(
+          "flex flex-col items-center rounded-md",
+          " text-black bg-gradient-to-b from-[#FFF]",
+          "to-[#FFF] sm:flex-row drop-shadow-2xl"
+        )}
+      >
         <Image
           className="h-40 w-40 mt-8 rounded-full sm:rounded-md sm:h-80 sm:w-40 sm:mt-0 object-cover"
           src={meJpg}
@@ -81,41 +103,77 @@ const AboutSection = ({ lang }: { lang: keyof typeof Text }) => {
           <h3 className="text-xl mb-8">{Text[lang].subTitle}</h3>
           <p className="max-w-lg">{Text[lang].description}</p>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="mt-8">
-        <h3 className="text-3xl text-left font-bold flex self-start mb-4">
+      <div className="mt-8 overflow-hidden">
+        <motion.h3
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, transition: { duration: 1 } }}
+          viewport={{ once: true }}
+          className="text-3xl text-left font-bold flex self-start mb-4"
+        >
           {Text[lang].softSkillsTitle}
-        </h3>
+        </motion.h3>
 
-        <div className="text-center flex flex-col gap-8 md:flex-row basis-1/3">
-          <div className="flex flex-col items-center bg-white text-black rounded-md gap-2 p-4 max-w-sm flex-1 drop-shadow-2xl hover:scale-[1.05] transition ease-in-out">
+        <motion.div
+          initial={{ opacity: 0, x: 300 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              type: "spring",
+              bounce: 0.4,
+              duration: 1,
+            },
+          }}
+          viewport={{ once: true }}
+          className="text-center flex flex-col gap-8 md:flex-row basis-1/3"
+        >
+          <div className={cardsClassName}>
             <Image src="/eye2.svg" height={50} width={50} alt="" />
             <h4 className="text-lg">{Text[lang].firstSoftSkillTitle}</h4>
             <p className="p-2">{Text[lang].firstSoftSkillDescription}</p>
           </div>
 
-          <div className="flex flex-col items-center bg-white text-black rounded-md gap-2 p-4 max-w-sm flex-1 drop-shadow-2xl hover:scale-[1.05] transition ease-in-out">
+          <div className={cardsClassName}>
             <Image src="/team2.svg" height={50} width={50} alt="" />
             <h4 className="text-lg">{Text[lang].secondSoftSkillTitle}</h4>
             <p className="p-2">{Text[lang].secondSoftSkillDescription}</p>
           </div>
 
-          <div className="flex flex-col items-center bg-white text-black rounded-md gap-2 p-4 max-w-sm flex-1 drop-shadow-2xl hover:scale-[1.05] transition ease-in-out">
+          <div className={cardsClassName}>
             <Image src="/bulb2.svg" height={50} width={50} alt="" />
             <h4 className="text-lg">{Text[lang].thirdHardSkillTitle}</h4>
             <p className="p-2">{Text[lang].thirdHardSkillDescription}</p>
           </div>
-        </div>
+        </motion.div>
       </div>
 
-      <div className="mt-8">
-        <h3 className="text-3xl text-left font-bold flex self-start mb-4">
+      <div className="mt-8 overflow-hidden">
+        <motion.h3
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, transition: { duration: 1 } }}
+          viewport={{ once: true }}
+          className="text-3xl text-left font-bold flex self-start mb-4"
+        >
           {Text[lang].hardSkillsTitle}
-        </h3>
+        </motion.h3>
 
-        <div className="text-center flex flex-col gap-8 md:flex-row basis-1/3">
-          <div className="flex flex-col items-center bg-white text-black rounded-md gap-2 p-4 max-w-sm flex-1 drop-shadow-2xl hover:scale-[1.05] transition ease-in-out">
+        <motion.div
+          initial={{ opacity: 0, x: -300 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              type: "spring",
+              bounce: 0.4,
+              duration: 1,
+            },
+          }}
+          viewport={{ once: true }}
+          className="text-center flex flex-col gap-8 md:flex-row basis-1/3"
+        >
+          <div className={cardsClassName}>
             <div className="flex">
               <Image src="/html5.svg" height={50} width={50} alt="html5 icon" />
               <Image
@@ -130,7 +188,7 @@ const AboutSection = ({ lang }: { lang: keyof typeof Text }) => {
             <p className="p-2">{Text[lang].firstHardSkillDescription}</p>
           </div>
 
-          <div className="flex flex-col items-center bg-white text-black rounded-md gap-2 p-4 max-w-sm flex-1 drop-shadow-2xl hover:scale-[1.05] transition ease-in-out">
+          <div className={cardsClassName}>
             <div className="flex">
               <Image
                 src="/react.svg"
@@ -149,7 +207,7 @@ const AboutSection = ({ lang }: { lang: keyof typeof Text }) => {
             <p className="p-2">{Text[lang].secondHardSkillDescription}</p>
           </div>
 
-          <div className="flex flex-col items-center bg-white text-black rounded-md gap-2 p-4 max-w-sm flex-1 drop-shadow-2xl hover:scale-[1.05] transition ease-in-out">
+          <div className={cardsClassName}>
             <div className="flex">
               <Image
                 src="/node.svg"
@@ -167,7 +225,7 @@ const AboutSection = ({ lang }: { lang: keyof typeof Text }) => {
             <h4 className="text-lg">{Text[lang].thirdHardSkillTitle}</h4>
             <p className="p-2">{Text[lang].thirdHardSkillDescription}</p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
