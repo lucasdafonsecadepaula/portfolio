@@ -72,7 +72,7 @@ const ProjectsSection = ({ lang }: { lang: keyof typeof Text }) => {
                 initial={{ opacity: 0, y: 200 }}
                 whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
                 viewport={{ once: true }}
-                className="flex flex-col items-center rounded-md sm:flex-row drop-shadow-2xl bg-white text-black mx-8"
+                className="flex flex-col items-center rounded-md sm:flex-row drop-shadow-md bg-white mx-8"
               >
                 <Image
                   className="h-auto w-full rounded-md sm:h-auto sm:w-80 sm:mt-0 object-cover"

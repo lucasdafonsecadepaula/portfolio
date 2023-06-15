@@ -8,7 +8,7 @@ import ProjectsSection from "../components/Section/Projects";
 
 export default function Home() {
   return (
-    <div className="font-custom bg-primary min-h-screen min-w-full text-white scroll-smooth">
+    <div className="bg-primary min-h-screen min-w-full scroll-smooth">
       <Head>
         <title>Lucas de Paula</title>
         <meta name="description" content="Lucas de Paula, desenvolvedor web" />

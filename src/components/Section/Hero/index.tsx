@@ -39,9 +39,10 @@ const HeroSection = ({ lang }: { lang: keyof typeof Text }) => {
             delay: 0.5,
             duration: 0.75,
           }}
-          className="text-3xl sm:text-5xl"
+          className="text-3xl sm:text-6xl leading-[110%] tracking-tighter"
         >
-          {Text[lang].title.first} <strong>{Text[lang].title.last}</strong>
+          {Text[lang].title.first}{" "}
+          <span className="font-black">{Text[lang].title.last}</span>
         </motion.h1>
 
         <motion.p
@@ -51,11 +52,11 @@ const HeroSection = ({ lang }: { lang: keyof typeof Text }) => {
             delay: 0.75,
             duration: 0.75,
           }}
-          className="max-w-lg mt-8 text-md sm:text-lg"
+          className="max-w-lg mt-8 text-md sm:text-xl"
         >
           {Text[lang].description}
         </motion.p>
-        <motion.button
+        {/* <motion.button
           initial={{ y: 25, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
@@ -65,9 +66,9 @@ const HeroSection = ({ lang }: { lang: keyof typeof Text }) => {
           className="cursor-pointer p-2 bg-tertiary rounded-md mt-8 sm:text-lg"
         >
           <a href="#contact">{Text[lang].button}</a>
-        </motion.button>
+        </motion.button> */}
       </div>
-      <div className="absolute bottom-0 right-0 opacity-30 flex justify-end">
+      <div className="absolute bottom-0 right-0 opacity-80 flex justify-end">
         <motion.div
           initial={{ y: 25, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}

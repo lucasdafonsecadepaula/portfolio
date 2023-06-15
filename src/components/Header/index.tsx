@@ -52,25 +52,24 @@ const Header = ({ lang }: { lang: keyof typeof Text }) => {
     <header
       className={classNames(
         "z-20 flex justify-between fixed top-0 py-3 w-full",
-        "bg-primary drop-shadow-2xl items-center lg:px-40 border-b-[1px]"
+        "bg-primary drop-shadow-md items-center lg:px-40"
       )}
     >
       <div>
         <a
           onClick={() => gotTo("hero")}
-          className="font-bold cursor-pointer p-2 ml-4"
+          className="font-bold p-1 cursor-pointer focus:after:w-full focus:after:left-[0%] hover:after:w-full hover:after:left-[0%] relative ease-[cubic-bezier(0.25,0.8,0.25,1)] duration-[400ms] transition-[color] border-[none] after:content-[''] after:pointer-events-none after:absolute after:w-[0%] after:h-0.5 after:bg-tertiary after:ease-[cubic-bezier(0.25,0.8,0.25,1)] after:duration-[400ms] after:transition-[width,left] after:left-2/4 after:-bottom-0.5"
         >
           Lucas
         </a>
       </div>
-      <div className="flex gap-4 mr-4">
+      <div className="flex gap-6 mr-4">
         <button
           className="order-2 sm:hidden"
           onClick={() => setIsOpenHamburgerMenu(true)}
         >
           <GiHamburgerMenu fontSize={24} />
         </button>
-        {/* {isOpenHamburgerMenu && ( */}
         <ul
           className={classNames(
             "flex-col fixed top-0 left-0",
@@ -80,7 +79,7 @@ const Header = ({ lang }: { lang: keyof typeof Text }) => {
           )}
         >
           <span
-            className="absolute top-0 left-0 p-4 sm:hidden text-white"
+            className="absolute top-0 left-0 p-4 sm:hidden"
             onClick={() => setIsOpenHamburgerMenu(false)}
           >
             <GrClose id="close-hamburgermenu-icon" />
@@ -88,7 +87,7 @@ const Header = ({ lang }: { lang: keyof typeof Text }) => {
           <li>
             <Link
               href={Text[lang].link}
-              className="flex items-center gap-2 cursor-pointe p-2 pb-0"
+              className="flex items-center p-1 gap-2 cursor-pointer font-bold focus:after:w-full focus:after:left-[0%] hover:after:w-full hover:after:left-[0%] relative ease-[cubic-bezier(0.25,0.8,0.25,1)] duration-[400ms] transition-[color] border-[none] after:content-[''] after:pointer-events-none after:absolute after:w-[0%] after:h-0.5 after:bg-tertiary after:ease-[cubic-bezier(0.25,0.8,0.25,1)] after:duration-[400ms] after:transition-[width,left] after:left-2/4 after:-bottom-0.5"
             >
               {Text[lang].language}
               {Text[lang].flag}
@@ -97,20 +96,23 @@ const Header = ({ lang }: { lang: keyof typeof Text }) => {
           <li>
             <a
               onClick={() => gotTo("about")}
-              className="cursor-pointer p-2 z-50"
+              className="cursor-pointer p-1 z-50 font-bold focus:after:w-full focus:after:left-[0%] hover:after:w-full hover:after:left-[0%] relative ease-[cubic-bezier(0.25,0.8,0.25,1)] duration-[400ms] transition-[color] border-[none] after:content-[''] after:pointer-events-none after:absolute after:w-[0%] after:h-0.5 after:bg-tertiary after:ease-[cubic-bezier(0.25,0.8,0.25,1)] after:duration-[400ms] after:transition-[width,left] after:left-2/4 after:-bottom-0.5"
             >
               {Text[lang].about}
             </a>
           </li>
           <li>
-            <a onClick={() => gotTo("projects")} className="cursor-pointer p-2">
+            <a
+              onClick={() => gotTo("projects")}
+              className="font-bold p-1 cursor-pointer focus:after:w-full focus:after:left-[0%] hover:after:w-full hover:after:left-[0%] relative ease-[cubic-bezier(0.25,0.8,0.25,1)] duration-[400ms] transition-[color] border-[none] after:content-[''] after:pointer-events-none after:absolute after:w-[0%] after:h-0.5 after:bg-tertiary after:ease-[cubic-bezier(0.25,0.8,0.25,1)] after:duration-[400ms] after:transition-[width,left] after:left-2/4 after:-bottom-0.5"
+            >
               {Text[lang].projects}
             </a>
           </li>
           <li className="sm:hidden">
             <a
               onClick={() => gotTo("contact")}
-              className="cursor-pointer p-2 bg-tertiary rounded-md order-1"
+              className="cursor-pointer p-2 bg-tertiary rounded-md order-1 text-primary"
             >
               {Text[lang].contact}
             </a>
@@ -119,7 +121,7 @@ const Header = ({ lang }: { lang: keyof typeof Text }) => {
         {/* )} */}
         <a
           onClick={() => gotTo("contact")}
-          className="cursor-pointer p-2 bg-tertiary rounded-md order-1"
+          className="cursor-pointer py-2 px-4 bg-tertiary rounded-md order-1 text-primary"
         >
           {Text[lang].contact}
         </a>

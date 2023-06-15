@@ -68,8 +68,8 @@ const Text = {
 
 const AboutSection = ({ lang }: { lang: keyof typeof Text }) => {
   const cardsClassName = classNames(
-    "flex flex-col items-center bg-white text-black",
-    "rounded-md gap-2 p-4 max-w-sm flex-1 drop-shadow-2xl",
+    "flex flex-col items-center bg-white",
+    "rounded-md gap-2 p-4 max-w-sm flex-1 drop-shadow-md",
     "hover:scale-[1.05] transition ease-in-out"
   );
   return (
@@ -90,8 +90,8 @@ const AboutSection = ({ lang }: { lang: keyof typeof Text }) => {
         viewport={{ once: true }}
         className={classNames(
           "flex flex-col items-center rounded-md",
-          " text-black bg-gradient-to-b from-[#FFF]",
-          "to-[#FFF] sm:flex-row drop-shadow-2xl"
+          "bg-gradient-to-b from-[#FFF]",
+          "to-[#FFF] sm:flex-row drop-shadow-md"
         )}
       >
         <Image
@@ -127,7 +127,7 @@ const AboutSection = ({ lang }: { lang: keyof typeof Text }) => {
             },
           }}
           viewport={{ once: true }}
-          className="text-center flex flex-col gap-8 md:flex-row basis-1/3"
+          className="text-center flex flex-col gap-8 md:flex-row basis-1/3 p-6"
         >
           <div className={cardsClassName}>
             <Image src="/eye2.svg" height={50} width={50} alt="" />
@@ -143,8 +143,8 @@ const AboutSection = ({ lang }: { lang: keyof typeof Text }) => {
 
           <div className={cardsClassName}>
             <Image src="/bulb2.svg" height={50} width={50} alt="" />
-            <h4 className="text-lg">{Text[lang].thirdHardSkillTitle}</h4>
-            <p className="p-2">{Text[lang].thirdHardSkillDescription}</p>
+            <h4 className="text-lg">{Text[lang].thirdSoftSkillTitle}</h4>
+            <p className="p-2">{Text[lang].thirdSoftSkillDescription}</p>
           </div>
         </motion.div>
       </div>
@@ -171,7 +171,7 @@ const AboutSection = ({ lang }: { lang: keyof typeof Text }) => {
             },
           }}
           viewport={{ once: true }}
-          className="text-center flex flex-col gap-8 md:flex-row basis-1/3"
+          className="text-center flex flex-col gap-8 md:flex-row basis-1/3 p-6"
         >
           <div className={cardsClassName}>
             <div className="flex">

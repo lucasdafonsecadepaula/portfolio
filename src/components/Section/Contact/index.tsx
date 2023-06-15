@@ -88,7 +88,7 @@ const ContactSection = ({ lang }: { lang: "pt" | "en" }) => {
             <input
               name="name"
               required
-              className="peer flex w-full rounded-md focus:border-tertiary focus:ring-tertiary focus:drop-shadow-2xl text-black"
+              className="peer flex w-full rounded-md focus:border-tertiary focus:ring-tertiary focus:drop-shadow-md"
               type="text"
               id="name"
             />
@@ -103,7 +103,7 @@ const ContactSection = ({ lang }: { lang: "pt" | "en" }) => {
             <input
               name="email"
               required
-              className="peer flex w-full rounded-md focus:border-tertiary focus:ring-tertiary focus:drop-shadow-2xl text-black"
+              className="peer flex w-full rounded-md focus:border-tertiary focus:ring-tertiary focus:drop-shadow-md"
               type="email"
               id="email"
             />
@@ -119,7 +119,7 @@ const ContactSection = ({ lang }: { lang: "pt" | "en" }) => {
             <textarea
               name="message"
               required
-              className="peer flex w-full rounded-md focus:border-tertiary focus:ring-tertiary focus:drop-shadow-2xl text-black h-40 resize-none"
+              className="peer flex w-full rounded-md focus:border-tertiary focus:ring-tertiary focus:drop-shadow-md h-40 resize-none"
               id="message"
               rows={4}
               cols={50}
