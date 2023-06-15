@@ -8,7 +8,7 @@ import EnglishFlag from "../icons/EnglishFlag";
 
 const Text = {
   pt: {
-    language: "English",
+    language: "English Version",
     flag: <EnglishFlag />,
     about: "Sobre",
     projects: "Projetos",
@@ -16,7 +16,7 @@ const Text = {
     link: "/en",
   },
   en: {
-    language: "Português",
+    language: "Versão em português",
     flag: <BrazilianFlag />,
     about: "About",
     projects: "Projects",
@@ -89,8 +89,8 @@ const Header = ({ lang }: { lang: keyof typeof Text }) => {
               href={Text[lang].link}
               className="flex items-center p-1 gap-2 cursor-pointer font-bold focus:after:w-full focus:after:left-[0%] hover:after:w-full hover:after:left-[0%] relative ease-[cubic-bezier(0.25,0.8,0.25,1)] duration-[400ms] transition-[color] border-[none] after:content-[''] after:pointer-events-none after:absolute after:w-[0%] after:h-0.5 after:bg-tertiary after:ease-[cubic-bezier(0.25,0.8,0.25,1)] after:duration-[400ms] after:transition-[width,left] after:left-2/4 after:-bottom-0.5"
             >
-              {Text[lang].language}
               {Text[lang].flag}
+              {Text[lang].language}
             </Link>
           </li>
           <li>

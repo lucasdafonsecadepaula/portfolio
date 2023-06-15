@@ -134,25 +134,25 @@ const ContactSection = ({ lang }: { lang: "pt" | "en" }) => {
 
           <button type="submit" disabled={contactMessageStatus !== "waiting"}>
             {contactMessageStatus === "waiting" && (
-              <div className="w-full h-full p-2 bg-tertiary rounded-md flex justify-center items-center gap-4">
+              <div className="w-full h-full p-2 bg-tertiary rounded-md flex justify-center items-center gap-4 text-primary">
                 <BsFillEnvelopeFill />
                 {Text[lang].buttonStatus.send}
               </div>
             )}
             {contactMessageStatus === "sending" && (
-              <div className="w-full h-full p-2 bg-tertiary rounded-md flex justify-center items-center gap-4">
+              <div className="w-full h-full p-2 bg-tertiary rounded-md flex justify-center items-center gap-4 text-primary">
                 <AiOutlineLoading className="animate-spin" />
                 {Text[lang].buttonStatus.sending}
               </div>
             )}
             {contactMessageStatus === "success" && (
-              <div className="w-full h-full p-2 bg-[#21FA90] rounded-md flex justify-center items-center gap-4">
+              <div className="w-full h-full p-2 bg-[#21FA90] rounded-md flex justify-center items-center gap-4 text-primary">
                 <MdDone />
                 {Text[lang].buttonStatus.sent}
               </div>
             )}
             {contactMessageStatus === "error" && (
-              <div className="w-full h-full p-2 bg-[#F45866] rounded-md flex justify-center items-center gap-4">
+              <div className="w-full h-full p-2 bg-[#F45866] rounded-md flex justify-center items-center gap-4 text-primary">
                 <MdOutlineErrorOutline />
                 {Text[lang].buttonStatus.error}
               </div>
