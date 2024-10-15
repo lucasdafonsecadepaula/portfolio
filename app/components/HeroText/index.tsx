@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 import { useEffect, useRef } from 'react'
 
 const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 export function HeroText() {
-  const intervalRef = useRef<NodeJS.Timer>(null)
+  const intervalRef = useRef<any>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
   const intRef = useRef<number>(0)
 
@@ -13,6 +14,7 @@ export function HeroText() {
       let iteration = 0
       const animationWords = ['DESENVOLVEDOR REACT', 'DESENVOLVEDOR FRONT-END']
       const wordIndex = intRef.current
+
       if (!titleRef?.current) return
       if (intervalRef.current) clearInterval(intervalRef.current)
       intervalRef.current = setInterval(() => {
