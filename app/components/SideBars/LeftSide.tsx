@@ -10,7 +10,7 @@ import { TopLeftImage } from './components/TopLeftImage'
 
 export function LeftSideBar() {
   return (
-    <div className="hidden lg:block h-screen w-[15%] border-r border-primary-350 sticky top-0 bottom-0 left-0 overflow-hidden">
+    <div className="hidden lg:block h-screen w-[15%] border-r border-primary-350 sticky top-0 bottom-0 left-0">
       <motion.div
         initial={{ x: -50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}

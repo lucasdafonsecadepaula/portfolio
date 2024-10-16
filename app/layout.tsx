@@ -33,14 +33,14 @@ export const metadata: Metadata = {
       'Portfólio profissional de Lucas de Paula, especialista em React, TypeScript e liderança técnica.',
     url: 'https://lucasdafonsecadepaula.vercel.app/',
     type: 'website',
-    // images: [
-    //   {
-    //     url: '/assets/imgs/me.png',
-    //     width: 1200,
-    //     height: 630,
-    //     alt: 'Lucas de Paula Portfólio',
-    //   },
-    // ],
+    images: [
+      {
+        url: './opengraph-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Lucas de Paula Portfólio',
+      },
+    ],
   },
 }
 
@@ -52,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased scroll-smooth`}
+        className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased scroll-smooth overflow-x-hidden`}
       >
         {children}
       </body>
