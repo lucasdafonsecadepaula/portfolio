@@ -1,0 +1,122 @@
+{
+    "HomePage": {
+        "LeftSideBar": {
+            "Tooltip": {
+                "Home": "INICIO",
+                "Articles": "ARTIGOS",
+                "Projects": "PROJETOS",
+                "Contact": "CONTATO",
+                "GoBack": "VOLTAR"
+            }
+        },
+        "TopBar": {
+            "Version": {
+                "Text": "English Version Here",
+                "Locale": "en"
+            },
+            "Drawer": {
+                "Home": "Tela Inicial",
+                "Articles": "Aprenda Comigo",
+                "Projects": "Projetos",
+                "Contact": "Contato"
+            }
+        },
+        "HeroSection": {
+            "h1": {
+                "sm": "Mais que um",
+                "lg-1": "DESENVOLVEDOR REACT",
+                "lg-2": "DESENVOLVEDOR FRONT-END"
+            },
+            "h2": "Desenvolver é apenas uma etapa. É essencial compreender profundamente as necessidades do usuário final para alcançar a excelência, prazer me chamo Lucas de Paula.",
+            "button": "ME CONTATE",
+            "atributes": {
+                "1": "Anos de experiência",
+                "2": "Empresas que contribuí",
+                "3": "Projetos desenvolvidos"
+            }
+        },
+        "JobExperiencesSection": {
+            "title": "Minhas experiências",
+            "subtitle": "Navegando por ambientes diversos com adaptabilidade e profissionalismo.",
+            "job-1": {
+                "sector": "Arquitetura de Sistemas",
+                "cargo-1": "Desenvolvedor Front-end",
+                "cargo-1-description": "Atuei como desenvolvedor front-end líder, contribuindo significativamente para diversos projetos de empresas terceirizadas em diferentes setores e utilizando uma variede tecnologias.<break></break>Iniciei minha jornada colaborando com a Axis Mobfintech, ondedesenvolvi projetos do zero e mantive bibliotecas privadasexclusivas da empresa. Entre os projetos destacados, trabalheina apresentação em tempo real de dashboards de comprasrealizadas e no cadastro de POS (pontos de venda). Todos osprojetos na Axis foram desenvolvidos com React e TypeScript,permitindo uma interface interativa e responsiva.<break></break>Além disso, colaborei com a Spdata em dois projetos de gestãohospitalar utilizando Vue.js, onde fiz integrações com sistemasgovernamentais, enfrentando desafios técnicos e regulatórios.<break></break>Uma das minhas maiores contribuições foi para a Versatus HPC,onde desenvolvi a maior parte do projeto Kosen Energy, voltadopara previsões meteorológicas e precificação. Este projetoapresentou um nicho muito específico, e o maior desafio foi acriação desacoplada dos elementos das telas de relatórios, queincluíam diversos gráficos e filtros. Cada tela foi projetadapara ser gerada dinamicamente via API, permitindo que todos oscomponentes do front-end fossem criados de forma modular.",
+                "cargo-2": "UX Designer",
+                "cargo-2-description": "Aceitei o desafio de me aprofundar no universo de UX e, em alguns projetos, atuei como UX Designer, reestruturando telas para melhorar a usabilidade e alinhar o design às necessidades dos usuários finais. Em projetos da Axis Mobfintech, fiz ajustes de UX, mas o maior destaque foi minha atuação no projeto da Versatus HPC. Lá, sugeri e implementei alterações significativas na aplicação, que foram altamente elogiadas pelo product owner, principalmente pela forma como as mudanças otimizaram a experiência do usuário e trouxeram melhorias visíveis na navegabilidade."
+            },
+            "job-2": {
+                "sector": "Solução Omnichannel",
+                "cargo-1": "Desenvolvedor Front-end",
+                "cargo-1-description": "Contribuí para o desenvolvimento do NxSuite, uma plataforma SAAS de chatbot que otimiza a criação de fluxos de atendimento automáticos, conectando negócios e clientes de maneira eficiente. Iniciei no time de atendimento ao cliente em tempo real, desenvolvendo uma interface dinâmica com React JS e WebSocket, utilizando a biblioteca Socket.IO. Além de desenvolver, implementei melhorias no layout da interface, resultando em uma experiência de atendimento mais intuitiva e eficiente para os usuários.<break></break>Posteriormente, fui promovido para os times de integração e dados, onde liderava a implementação de integrações com APIs externas de parceiros, como a VTEX, além de desenvolver interfaces que suportavam a visualização e o upload de grandes volumes de dados. Durante esse período, mentoriei dois desenvolvedores estagiários, acompanhando seu progresso até que fossem promovidos a desenvolvedores juniores.<break></break>Realizei uma refatoração significativa no código do projeto, aplicando o paradigma funcional e utilizando metodologias como DRY e KISS, focando em funções puras e imutabilidade. Além disso, introduzi a metodologia de Atomic Design no projeto, melhorando a consistência dos componentes. Também identifiquei e corrigi um comportamento que causava diversas re-renderizações desnecessárias ao utilizar a biblioteca Ant Design, otimizando a performance da aplicação. Adicionalmente, encontrei uma vulnerabilidade de SQL Injection no sistema e contribuí diretamente para a sua resolução, garantindo maior segurança para os dados dos usuários."
+            }
+        },
+        "MyStackSection": {
+            "title": "Minha Stack",
+            "subtitle": "Comprometido em se manter atualizado com as últimas tendências e técnicas de desenvolvimento.",
+            "reactjs": "React é a biblioteca para interfaces de usuário nativas e web.",
+            "typescript": "O TypeScript estende o JavaScript adicionando tipos à linguagem.",
+            "nextjs": "Usado por algumas das maiores empresas do mundo, o Next.js permite que você crie aplicativos web de alta qualidade com o poder dos componentes React.",
+            "nodejs": "Node.js® é um ambiente de execução JavaScript gratuito, de código aberto e multiplataforma que permite aos desenvolvedores criar servidores, aplicativos da web, ferramentas de linha de comando e scripts.",
+            "aws": "AWS, é uma plataforma de serviços de computação em nuvem oferecida pela Amazon.",
+            "jest": "Jest é um poderoso Framework de Testes em JavaScript com um foco na simplicidade."
+        },
+        "ContactSection": {
+            "title": "Me contate",
+            "subtitle": "Aberto a propostas, duvidas sobre programação e se voce já trabalhou comigo deixa uma mensagem para entrar como testemunho.",
+            "name": "Nome",
+            "message": "Mensagem",
+            "button": {
+                "waiting": "Envie sua mensagem",
+                "sending": "Enviando",
+                "success": "Enviado com sucesso",
+                "error": "Erro ao enviar"
+            }
+        },
+        "FooterSection": {}
+    },
+    "Error": {
+        "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
+        "title": "Something went wrong!"
+    },
+    "IndexPage": {
+        "description": "This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router. Try changing the locale in the top right corner and see how the content changes.",
+        "title": "next-intl example"
+    },
+    "LocaleLayout": {
+        "title": "next-intl example"
+    },
+    "LocaleSwitcher": {
+        "label": "Change language",
+        "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unknown}}"
+    },
+    "Manifest": {
+        "name": "next-intl example"
+    },
+    "Navigation": {
+        "home": "Home",
+        "pathnames": "Pathnames"
+    },
+    "NotFoundPage": {
+        "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
+        "title": "Page not found"
+    },
+    "PageLayout": {
+        "links": {
+            "docs": {
+                "description": "Learn more about next-intl in the official docs.",
+                "href": "https://next-intl-docs.vercel.app/",
+                "title": "Docs"
+            },
+            "source": {
+                "description": "Browse the source code of this example on GitHub.",
+                "href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router",
+                "title": "Source code"
+            }
+        }
+    },
+    "PathnamesPage": {
+        "description": "<p>The pathnames are internationalized too.</p><p>If you're using the default language English, you'll see <code>/en/pathnames</code> in the browser address bar on this page.</p><p>If you change the locale to German, the URL is localized accordingly (<code>/de/pfadnamen</code>).</p>",
+        "title": "Pathnames"
+    }
+}
