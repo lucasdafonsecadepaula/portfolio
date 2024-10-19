@@ -8,6 +8,6 @@ export default async function manifest(): Promise<MetadataRoute.Manifest> {
   return {
     name: t('name'),
     start_url: '/',
-    theme_color: '#101E33',
+    theme_color: '#050505',
   }
 }

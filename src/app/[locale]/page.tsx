@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import { ContactSection } from '@/src/components/ContactSection'
 import { FooterSection } from '@/src/components/FooterSection'
 import { Hero } from '@/src/components/Hero'

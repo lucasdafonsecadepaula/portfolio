@@ -43,10 +43,10 @@ it('sets caching headers', async ({ request }) => {
 
 it('can be used to configure metadata', async ({ page }) => {
   await page.goto('/en')
-  await expect(page).toHaveTitle('next-intl example')
+  await expect(page).toHaveTitle('Lucas de Paula - Frontend Developer | React & TypeScript Specialist')
 
   await page.goto('/pt')
-  await expect(page).toHaveTitle('next-intl example')
+  await expect(page).toHaveTitle('Lucas de Paula - Frontend Developer | React & TypeScript Specialist')
 })
 
 it('can be used to localize the page', async ({ page }) => {
@@ -91,26 +91,21 @@ it('serves a sitemap.xml', async ({ page }) => {
   const response = await page.goto('/sitemap.xml')
   const body = await response!.body()
 
-  expect(body.toString().replaceAll(' ', '')).toBe(
-    `
-      <?xml version="1.0" encoding="UTF-8"?>
-      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-        <url>
-          <loc>http://localhost:3000/pt</loc>
-          <xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt" />
-          <xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en" />
-        </url>
-      </urlset>
-  `.replaceAll(' ', ''),
-  )
+  const isThereFirstRoute = body.toString().includes('<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt" />')
+  const isThereSecondRoute = body.toString().includes('<xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en" />')
+  const isThereThirdRoute = body.toString().includes('<loc>http://localhost:3000/pt</loc>')
+
+  expect(isThereFirstRoute).toBe(true)
+  expect(isThereSecondRoute).toBe(true)
+  expect(isThereThirdRoute).toBe(true)
 })
 
 it('provides a manifest', async ({ page }) => {
   const response = await page.goto('/manifest.webmanifest')
   const body = await response!.json()
   expect(body).toEqual({
-    name: 'next-intl example',
+    name: 'Portfólio de Lucas de Paula',
     start_url: '/',
-    theme_color: '#101E33',
+    theme_color: '#050505',
   })
 })

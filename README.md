@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ![Lucas de Paula Portfolio](https://github.com/lucasdafonsecadepaula/portfolio/blob/main/public/images/og-image.png)
 
-## Getting Started
+# Lucas de Paula's Portfolio
 
-First, run the development server:
+Welcome to my personal portfolio repository! This project is built to showcase my work as a Frontend Developer, featuring projects, my tech stack, and ways to get in touch. The portfolio is responsive, interactive, and designed with a focus on modern web technologies.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Contact](#contact)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Introduction
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This portfolio highlights my expertise in frontend development, showcasing some of my past projects and experiences. The site is fully responsive and designed to provide a smooth browsing experience across different devices.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+- **Responsive Design**: Adapts to different screen sizes for an optimal user experience on mobile, tablet, and desktop.
+- **Modern UI**: Clean and interactive interface, leveraging Tailwind CSS for fast and efficient styling.
+- **Projects Showcase**: View detailed descriptions of my past projects with links to live demos and GitHub repositories.
+- **Contact Section**: Get in touch with me through an integrated contact form.
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Next.js**: Server-side rendering and static site generation.
+- **Tailwind CSS**: Utility-first CSS framework for custom styling.
+- **React.js**: For building the dynamic user interface.
+- **TypeScript**: For static type checking, improving code quality.
+- **Vercel**: Deployment and hosting.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contact
 
-## Deploy on Vercel
+Feel free to reach out via the contact form on the portfolio or through the following channels:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Email**: lucasdafonsecadepaula@gmail.com
+- **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/lucas-da-fonseca-de-paula/)
+- **GitHub**: [GitHub Profile](https://github.com/lucasdafonsecadepaula)
