@@ -104,7 +104,7 @@ export function JobExperiencesSection() {
           companyName="ArchOffice"
           companyUrl="https://www.archoffice.tech/"
           companyTextUrl="archoffice.tech"
-          companyDate="2023"
+          companyDate="01/2023 - Atual"
           companyLogo={
             <Image src={archofficeLogo} width={100} alt="archlogo" />
           }
@@ -127,7 +127,7 @@ export function JobExperiencesSection() {
           companyMainFunction={t('JobExperiencesSection.job-2.sector')}
           companyUrl="https://www.smartnx.com/"
           companyTextUrl="smartnx.com"
-          companyDate="2020-2022"
+          companyDate="02/2022 - 11/2022"
           companyLogo={
             <Image
               src={smartNxLogo}
