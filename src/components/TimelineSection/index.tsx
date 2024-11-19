@@ -66,14 +66,14 @@ export function TimelineSection() {
         <div className="flex flex-col gap-8">
           <div>
             <p className="text-[18px] text-primary-800 mb-8">
-              {t('TimelineSection.2023.1')}
+              {t('TimelineSection.2023-1')}
             </p>
             <AnimatedGrid rows={axisRows} />
           </div>
 
           <div>
             <p className="text-[18px] text-primary-800 mb-8">
-              {t('TimelineSection.2023.2')}
+              {t('TimelineSection.2023-2')}
             </p>
             <div className="grid grid-cols-1 gap-4">
               <Image

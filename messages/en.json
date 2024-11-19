@@ -39,8 +39,8 @@
             "title": "Projects contributed",
             "subtitle": "Here is a timeline of the most important projects I've contributed to in recent years.",
             "2024": "Led the front-end development of the Versatus application for pricing and meteorological analysis in the Kosen Energy project. I also contributed to UX decisions, suggesting improvements in app usability and the use of filters and charts.",
-            "2023.1": "Developed and contributed to various internal projects at MobFintech, including real-time dashboards, large-scale data presentation, and payment API integrations for generating QR codes and Pix payments.",
-            "2023.2": "Gained my first experience with Vue.js, working on two projects at SPDATA. I led a front-end team in healthcare-related projects involving government API integrations. The image below is illustrative, as the projects are used internally.",
+            "2023-1": "Developed and contributed to various internal projects at MobFintech, including real-time dashboards, large-scale data presentation, and payment API integrations for generating QR codes and Pix payments.",
+            "2023-2": "Gained my first experience with Vue.js, working on two projects at SPDATA. I led a front-end team in healthcare-related projects involving government API integrations. The image below is illustrative, as the projects are used internally.",
             "2022": "Participated in developing the NXSuite project, a chatbot solution, where I worked on the text team, creating the interaction interface between operators and clients."
         },
         "JobExperiencesSection": {
