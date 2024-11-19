@@ -18,7 +18,8 @@ import { Divider } from '../../components/Divider'
 import { scrollTo } from '@/src/utils/scrollTo'
 import { useTranslations } from 'next-intl'
 import NextLink from 'next/link'
-import { Link } from '@/src/i18n/routing'
+import { Link, usePathname } from '@/src/i18n/routing'
+import { FileText } from 'lucide-react'
 
 interface DrawerContentProps {
   closeDrawer: () => void
@@ -58,6 +59,8 @@ function CustomButton({
 const DrawerContent = ({ isClosing, closeDrawer }: DrawerContentProps) => {
   const t = useTranslations('HomePage')
 
+  const pathname = usePathname()
+
   return (
     <div className="fixed inset-0 z-50">
       <motion.div
@@ -86,22 +89,33 @@ const DrawerContent = ({ isClosing, closeDrawer }: DrawerContentProps) => {
         </div>
         <Divider />
         <div className="p-4 flex flex-col gap-2">
-          <CustomButton onClick={scrollTo(0)} isActive={true}>
-            <HomeIcon size={28} />
-            {t('TopBar.Drawer.Home')}
-          </CustomButton>
+          <Link href="/">
+            <CustomButton isActive={pathname === '/'}>
+              <HomeIcon size={28} />
+              {t('TopBar.Drawer.Home')}
+            </CustomButton>
+          </Link>
+
+          <Link href="/curriculum">
+            <CustomButton isActive={pathname === '/curriculum'}>
+              <FileText size={28} />
+              {t('LeftSideBar.Tooltip.Curriculum')}
+            </CustomButton>
+          </Link>
 
           <Link href="/articles">
-            <CustomButton isActive={false}>
+            <CustomButton isActive={pathname === '/articles'}>
               <SchoolIcon size={28} />
               {t('TopBar.Drawer.Articles')}
             </CustomButton>
           </Link>
 
-          <CustomButton onClick={scrollTo(0)} isActive={false}>
-            <MailIcon size={28} />
-            {t('TopBar.Drawer.Contact')}
-          </CustomButton>
+          <Link href="/#contact">
+            <CustomButton isActive={pathname === '/#contact'}>
+              <MailIcon size={28} />
+              {t('TopBar.Drawer.Contact')}
+            </CustomButton>
+          </Link>
         </div>
         <Divider />
         <div className="p-4 flex flex-col gap-2">
