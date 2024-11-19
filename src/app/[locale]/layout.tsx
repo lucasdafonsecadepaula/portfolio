@@ -9,6 +9,11 @@ import localFont from 'next/font/local'
 import './globals.css'
 import { ReactNode } from 'react'
 import { routing } from '@/src/i18n/routing'
+import { LeftSideBar } from '@/src/components/SideBars/LeftSide'
+import { TopBar } from '@/src/components/Topbar'
+import { FooterSection } from '@/src/components/FooterSection'
+import { RightSideBar } from '@/src/components/SideBars/RightSide'
+import { notFound } from 'next/navigation'
 
 const geistSans = localFont({
   src: '../../assets/fonts/GeistVF.woff',
@@ -71,6 +76,11 @@ export default async function RootLayout({
   children: React.ReactNode
   params: { locale: string }
 }) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  if (!routing.locales.includes(locale as any)) {
+    notFound()
+  }
+
   unstable_setRequestLocale(locale)
 
   const messages = await getMessages()
@@ -81,7 +91,15 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased scroll-smooth overflow-x-hidden`}
       >
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <div className="min-h-screen w-full flex">
+            <LeftSideBar />
+            <div className="w-full flex flex-col">
+              <TopBar />
+              {children}
+              <FooterSection />
+            </div>
+            <RightSideBar />
+          </div>
         </NextIntlClientProvider>
       </body>
     </html>

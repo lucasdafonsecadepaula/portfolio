@@ -7,7 +7,6 @@ import {
   LinkedinIcon,
   MailIcon,
   MenuIcon,
-  RocketLauchIcon,
   SchoolIcon,
 } from '@/src/components/icons'
 import { motion } from 'framer-motion'
@@ -96,12 +95,6 @@ const DrawerContent = ({ isClosing, closeDrawer }: DrawerContentProps) => {
             <CustomButton isActive={false}>
               <SchoolIcon size={28} />
               {t('TopBar.Drawer.Articles')}
-            </CustomButton>
-          </Link>
-          <Link href="/projects">
-            <CustomButton isActive={false}>
-              <RocketLauchIcon size={28} />
-              {t('TopBar.Drawer.Projects')}
             </CustomButton>
           </Link>
 

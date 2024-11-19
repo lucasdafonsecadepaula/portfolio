@@ -44,6 +44,7 @@ export function ContactSection() {
       description={t('ContactSection.subtitle')}
     >
       <form
+        id="contact"
         ref={formRef}
         onSubmit={onSubmit}
         className="flex w-full items-center justify-center"
