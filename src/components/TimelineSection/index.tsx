@@ -50,7 +50,12 @@ export function TimelineSection() {
 
   const data = [
     {
-      title: '2024',
+      title: (
+        <div>
+          <h4 className="">2024</h4>
+          <h4 className="text-lg md:text-xl">Versatus - Kosen Energy</h4>
+        </div>
+      ),
       content: (
         <div>
           <p className="text-[18px] text-primary-800 mb-8">
@@ -61,35 +66,52 @@ export function TimelineSection() {
       ),
     },
     {
-      title: '2023',
+      title: (
+        <div>
+          <h4 className="">2023</h4>
+          <h4 className="text-lg md:text-xl">Axis Mobfintech</h4>
+        </div>
+      ),
       content: (
-        <div className="flex flex-col gap-8">
-          <div>
-            <p className="text-[18px] text-primary-800 mb-8">
-              {t('TimelineSection.2023-1')}
-            </p>
-            <AnimatedGrid rows={axisRows} />
-          </div>
-
-          <div>
-            <p className="text-[18px] text-primary-800 mb-8">
-              {t('TimelineSection.2023-2')}
-            </p>
-            <div className="grid grid-cols-1 gap-4">
-              <Image
-                src={spdata1}
-                alt="hero template"
-                width={500}
-                height={500}
-                className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-              />
-            </div>
+        <div>
+          <p className="text-[18px] text-primary-800 mb-8">
+            {t('TimelineSection.2023-1')}
+          </p>
+          <AnimatedGrid rows={axisRows} />
+        </div>
+      ),
+    },
+    {
+      title: (
+        <div>
+          <h4 className="">2023</h4>
+          <h4 className="text-lg md:text-xl">SPDATA - CNES</h4>
+        </div>
+      ),
+      content: (
+        <div>
+          <p className="text-[18px] text-primary-800 mb-8">
+            {t('TimelineSection.2023-2')}
+          </p>
+          <div className="grid grid-cols-1 gap-4">
+            <Image
+              src={spdata1}
+              alt="hero template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
           </div>
         </div>
       ),
     },
     {
-      title: '2022',
+      title: (
+        <div>
+          <h4 className="">2022</h4>
+          <h4 className="text-lg md:text-xl">SmartNX - NXSuite</h4>
+        </div>
+      ),
       content: (
         <div>
           <p className="text-[18px] text-primary-800 mb-8">
