@@ -5,7 +5,7 @@ import { ContactButton } from './components/ContactButton'
 import { HomeButton } from './components/HomeButton'
 import { TopLeftImage } from './components/TopLeftImage'
 import { IconButton } from '../buttons/Icon'
-import { RocketLauchIcon, SchoolIcon } from '../icons'
+import { SchoolIcon } from '../icons'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/src/i18n/routing'
 
@@ -30,11 +30,6 @@ export function LeftSideBar() {
               <Link href="/articles">
                 <IconButton tooltipText={t('LeftSideBar.Tooltip.Articles')}>
                   <SchoolIcon size={28} />
-                </IconButton>
-              </Link>
-              <Link href="/projects">
-                <IconButton tooltipText={t('LeftSideBar.Tooltip.Projects')}>
-                  <RocketLauchIcon size={28} />
                 </IconButton>
               </Link>
               <ContactButton tooltipText={t('LeftSideBar.Tooltip.Contact')} />

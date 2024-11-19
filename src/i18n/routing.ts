@@ -7,6 +7,7 @@ export const routing = defineRouting({
   pathnames: {
     '/': '/',
     '/articles': '/articles',
+    '/articles/flash-cards-dsa': '/articles/flash-cards-dsa',
     '/projects': '/projects',
   },
 })

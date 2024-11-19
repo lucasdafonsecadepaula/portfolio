@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import { ContactSection } from '@/src/components/ContactSection'
 import { FooterSection } from '@/src/components/FooterSection'
 import { Hero } from '@/src/components/Hero'
@@ -5,6 +6,7 @@ import { JobExperiencesSection } from '@/src/components/JobExperiencesSection'
 import { MyStackSection } from '@/src/components/MyStackSection'
 import { LeftSideBar } from '@/src/components/SideBars/LeftSide'
 import { RightSideBar } from '@/src/components/SideBars/RightSide'
+import { TimelineSection } from '@/src/components/TimelineSection'
 import { TopBar } from '@/src/components/Topbar'
 import { unstable_setRequestLocale } from 'next-intl/server'
 
@@ -22,6 +24,7 @@ export default function Home({ params: { locale } }: Props) {
         <TopBar />
         <div className="2xl:px-[8vw]">
           <Hero />
+          <TimelineSection />
           <JobExperiencesSection />
           <MyStackSection />
           <ContactSection />

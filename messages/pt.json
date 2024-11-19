@@ -2,16 +2,16 @@
     "HomePage": {
         "LeftSideBar": {
             "Tooltip": {
-                "Home": "INICIO",
-                "Articles": "ARTIGOS",
-                "Projects": "PROJETOS",
-                "Contact": "CONTATO",
-                "GoBack": "VOLTAR"
+                "Home": "Início",
+                "Articles": "Artigos",
+                "Projects": "Projetos",
+                "Contact": "Contato",
+                "GoBack": "Voltar"
             }
         },
         "TopBar": {
             "Version": {
-                "Text": "English Version Here",
+                "Text": "English Version",
                 "Locale": "en"
             },
             "Drawer": {
@@ -27,13 +27,21 @@
                 "lg-1": "DESENVOLVEDOR REACT",
                 "lg-2": "DESENVOLVEDOR FRONT-END"
             },
-            "h2": "Desenvolver é apenas uma etapa. É essencial compreender profundamente as necessidades do usuário final para alcançar a excelência, prazer me chamo Lucas de Paula.",
+            "h2": "Desenvolver é apenas uma etapa. É essencial compreender profundamente as necessidades do usuário final para alcançar a excelência. Prazer, me chamo Lucas de Paula.",
             "button": "ME CONTATE",
             "atributes": {
                 "1": "Anos de experiência",
                 "2": "Empresas que contribuí",
                 "3": "Projetos desenvolvidos"
             }
+        },
+        "TimelineSection": {
+            "title": "Projetos contribuidos",
+            "subtitle": "Aqui está uma timeline dos projetos mais importantes em que contribuí nos últimos anos.",
+            "2024": "Liderei o desenvolvimento front-end da aplicação de precificação e análises meteorológicas da Versatus, no projeto Kosen Energy. Contribuí também nas decisões de UX, sugerindo melhorias no fluxo de uso do aplicativo e na utilização de filtros e gráficos.",
+            "2023.1": "Desenvolvi e contribuí para diversos projetos internos na MobFintech, incluindo a criação de dashboards em tempo real, apresentação de dados em larga escala e integração com APIs de pagamentos para geração de QR Codes e pagamentos via Pix.",
+            "2023.2": "Tive minha primeira experiência com Vue.js, atuando em dois projetos na SPDATA, onde desenvolvi e liderei uma equipe de front-end. Os projetos eram voltados para o setor de saúde e envolviam integração com APIs governamentais. A imagem abaixo é meramente ilustrativa, pois os projetos são utilizados internamente.",
+            "2022": "Participei do desenvolvimento do projeto NXSuite, uma solução de chatbot, onde atuei na equipe de texto, responsável pela criação da interface de interação entre operadores e clientes."
         },
         "JobExperiencesSection": {
             "title": "Minhas experiências",
@@ -63,7 +71,7 @@
         },
         "ContactSection": {
             "title": "Me contate",
-            "subtitle": "Aberto a propostas, duvidas sobre programação e se voce já trabalhou comigo deixa uma mensagem para entrar como testemunho.",
+            "subtitle": "Estou aberto a propostas, dúvidas sobre programação e, se você já trabalhou comigo, deixe uma mensagem para aparecer como testemunho.",
             "name": "Nome",
             "message": "Mensagem",
             "button": {
@@ -81,7 +89,7 @@
     },
     "Error": {
         "description": "<p>Infelizmente, encontramos um erro.</p><p>Você pode tentar <retry>recarregar a página</retry> que estava visitando.</p>",
-        "title": "Algo deu errado!"
+        "title": "Ops, algo deu errado!"
     },
     "NotFoundPage": {
         "description": "Por favor, verifique o endereço na barra do navegador ou use a navegação para ir a uma página conhecida.",

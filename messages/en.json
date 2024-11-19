@@ -2,20 +2,20 @@
     "HomePage": {
         "LeftSideBar": {
             "Tooltip": {
-                "Home": "HOME",
-                "Articles": "ARTICLES",
-                "Projects": "PROJECTS",
-                "Contact": "CONTACT",
-                "GoBack": "GO BACK"
+                "Home": "Home",
+                "Articles": "Articles",
+                "Projects": "Projects",
+                "Contact": "Contact",
+                "GoBack": "Go Back"
             }
         },
         "TopBar": {
             "Version": {
-                "Text": "Versão Brasileira Aqui",
+                "Text": "Versão em Português",
                 "Locale": "pt"
             },
             "Drawer": {
-                "Home": "Home Page",
+                "Home": "Home Screen",
                 "Articles": "Learn With Me",
                 "Projects": "Projects",
                 "Contact": "Contact"
@@ -27,13 +27,21 @@
                 "lg-1": "REACT DEVELOPER",
                 "lg-2": "FRONT-END DEVELOPER"
             },
-            "h2": "Development is just one step. It's essential to deeply understand the end-user's needs to achieve excellence. Nice to meet you, my name is Lucas de Paula.",
+            "h2": "Developing is just one step. It's essential to deeply understand the end-user's needs to achieve excellence. Pleased to meet you, my name is Lucas de Paula.",
             "button": "CONTACT ME",
             "atributes": {
                 "1": "Years of experience",
-                "2": "Companies I've contributed to",
+                "2": "Companies I contributed to",
                 "3": "Projects developed"
             }
+        },
+        "TimelineSection": {
+            "title": "Projects contributed",
+            "subtitle": "Here is a timeline of the most important projects I've contributed to in recent years.",
+            "2024": "Led the front-end development of the Versatus application for pricing and meteorological analysis in the Kosen Energy project. I also contributed to UX decisions, suggesting improvements in app usability and the use of filters and charts.",
+            "2023.1": "Developed and contributed to various internal projects at MobFintech, including real-time dashboards, large-scale data presentation, and payment API integrations for generating QR codes and Pix payments.",
+            "2023.2": "Gained my first experience with Vue.js, working on two projects at SPDATA. I led a front-end team in healthcare-related projects involving government API integrations. The image below is illustrative, as the projects are used internally.",
+            "2022": "Participated in developing the NXSuite project, a chatbot solution, where I worked on the text team, creating the interaction interface between operators and clients."
         },
         "JobExperiencesSection": {
             "title": "My experiences",
@@ -41,29 +49,29 @@
             "job-1": {
                 "sector": "System Architecture",
                 "cargo-1": "Front-end Developer",
-                "cargo-1-description": "I worked as a lead front-end developer, contributing significantly to various projects for outsourced companies in different sectors and using a variety of technologies. <break></break> I started by collaborating with Axis Mobfintech, where I developed projects from scratch and maintained private libraries exclusive to the company. Among the highlighted projects, I worked on the real-time presentation of purchase dashboards and the registration of POS (points of sale). All projects at Axis were developed with React and TypeScript, allowing for an interactive and responsive interface. <break></break> Additionally, I collaborated with Spdata on two hospital management projects using Vue.js, where I integrated with government systems, facing technical and regulatory challenges. <break></break> One of my biggest contributions was for Versatus HPC, where I developed most of the Kosen Energy project, focused on weather forecasting and pricing. This project had a very specific niche, and the biggest challenge was the decoupled creation of the report screen elements, which included various charts and filters. Each screen was designed to be dynamically generated via API, allowing all front-end components to be created modularly.",
+                "cargo-1-description": "Worked as a lead front-end developer, significantly contributing to several outsourced projects across various sectors and using a wide range of technologies.<break></break>Started by collaborating with Axis Mobfintech, where I developed projects from scratch and maintained private libraries. Notable projects included real-time dashboards and POS (point of sale) registration. All projects at Axis were built with React and TypeScript, enabling interactive and responsive interfaces.<break></break>Additionally, collaborated with Spdata on two hospital management projects using Vue.js, where I handled government system integrations, tackling technical and regulatory challenges.<break></break>One of my biggest contributions was to Versatus HPC, where I developed most of the Kosen Energy project, focused on meteorological forecasting and pricing. The main challenge was creating decoupled screen elements for reports, including various charts and filters. Each screen was designed to be dynamically generated via API, ensuring modular front-end components.",
                 "cargo-2": "UX Designer",
-                "cargo-2-description": "I took on the challenge of delving into the UX world, and in some projects, I acted as a UX Designer, restructuring screens to improve usability and align the design with the needs of end users. In Axis Mobfintech projects, I made UX adjustments, but the biggest highlight was my role in the Versatus HPC project. There, I suggested and implemented significant changes to the application, which were highly praised by the product owner, especially for how the changes optimized the user experience and brought visible improvements in navigability."
+                "cargo-2-description": "Dived into UX design and worked as a UX Designer on several projects, restructuring screens to improve usability and align the design with user needs. At Axis Mobfintech, I adjusted UX, but my standout contribution was at Versatus HPC, where I suggested and implemented significant application changes that were highly praised by the product owner for enhancing user experience and navigation."
             },
             "job-2": {
                 "sector": "Omnichannel Solution",
                 "cargo-1": "Front-end Developer",
-                "cargo-1-description": "I contributed to the development of NxSuite, a SaaS chatbot platform that optimizes the creation of automated customer service flows, efficiently connecting businesses and customers. I started on the real-time customer service team, developing a dynamic interface with React JS and WebSocket, using the Socket.IO library. In addition to development, I implemented layout improvements, resulting in a more intuitive and efficient service experience for users. <break></break> Later, I was promoted to the integration and data teams, where I led the implementation of integrations with external partner APIs, such as VTEX, and developed interfaces that supported viewing and uploading large volumes of data. During this time, I mentored two intern developers, monitoring their progress until they were promoted to junior developers. <break></break> I performed a significant refactor of the project's code, applying the functional paradigm and using methodologies such as DRY and KISS, focusing on pure functions and immutability. Additionally, I introduced the Atomic Design methodology into the project, improving component consistency. I also identified and corrected a behavior that caused numerous unnecessary re-renders when using the Ant Design library, optimizing the application's performance. Furthermore, I found an SQL Injection vulnerability in the system and contributed directly to its resolution, ensuring greater data security for users."
+                "cargo-1-description": "Contributed to developing NxSuite, a SAAS chatbot platform that optimizes automatic flow creation for business-customer interactions. Initially, I worked in the real-time customer service team, building a dynamic interface with React JS and WebSocket using the Socket.IO library. I improved the interface layout, resulting in a more intuitive and efficient user experience.<break></break>Later, I led API integration and data teams, implementing external partner API integrations like VTEX and building interfaces supporting large data uploads. I mentored two junior developers, monitoring their progress until promotion.<break></break>Refactored the project code, applying functional programming and methodologies like DRY and KISS, focusing on pure functions and immutability. Introduced Atomic Design for consistent components. Identified and fixed performance issues caused by unnecessary re-renders using Ant Design, and resolved an SQL Injection vulnerability, ensuring better data security."
             }
         },
         "MyStackSection": {
             "title": "My Stack",
-            "subtitle": "Committed to staying up-to-date with the latest development trends and techniques.",
-            "reactjs": "React is a library for native and web user interfaces.",
+            "subtitle": "Committed to staying updated with the latest trends and techniques in development.",
+            "reactjs": "React is a library for building native and web user interfaces.",
             "typescript": "TypeScript extends JavaScript by adding types to the language.",
-            "nextjs": "Used by some of the world's largest companies, Next.js allows you to build high-quality web applications with the power of React components.",
-            "nodejs": "Node.js® is a free, open-source, cross-platform JavaScript runtime environment that enables developers to create servers, web applications, command-line tools, and scripts.",
-            "aws": "AWS is a cloud computing services platform offered by Amazon.",
-            "jest": "Jest is a powerful JavaScript Testing Framework with a focus on simplicity."
+            "nextjs": "Used by some of the world's largest companies, Next.js allows you to build high-quality web apps with the power of React components.",
+            "nodejs": "Node.js® is a free, open-source, cross-platform JavaScript runtime environment for building servers, web apps, CLI tools, and scripts.",
+            "aws": "AWS is a cloud computing platform offered by Amazon.",
+            "jest": "Jest is a powerful JavaScript testing framework with a focus on simplicity."
         },
         "ContactSection": {
             "title": "Contact me",
-            "subtitle": "Open to proposals, programming questions, and if you've worked with me, leave a message to be added as a testimonial.",
+            "subtitle": "I'm open to proposals, programming questions, and if you've worked with me, leave a message to appear as a testimonial.",
             "name": "Name",
             "message": "Message",
             "button": {
@@ -80,14 +88,14 @@
         "description": "Portfolio of Lucas de Paula, frontend developer with experience in React, TypeScript, and technical leadership. View projects, experiences, and contact."
     },
     "Error": {
-        "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
-        "title": "Something went wrong!"
+        "description": "<p>Unfortunately, an error occurred.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
+        "title": "Oops, something went wrong!"
     },
     "NotFoundPage": {
-        "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
+        "description": "Please check the address in the browser's address bar or use navigation to go to a known page.",
         "title": "Page not found"
     },
     "Manifest": {
-        "name": "Portfolio of Lucas de Paula"
+        "name": "Lucas de Paula's Portfolio"
     }
 }

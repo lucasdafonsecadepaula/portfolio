@@ -43,8 +43,12 @@ export function ContactSection() {
       title={t('ContactSection.title')}
       description={t('ContactSection.subtitle')}
     >
-      <form ref={formRef} onSubmit={onSubmit}>
-        <div className="flex flex-col items-center justify-center gap-4 p-4">
+      <form
+        ref={formRef}
+        onSubmit={onSubmit}
+        className="flex w-full items-center justify-center"
+      >
+        <div className="flex flex-col items-center justify-center gap-4 p-4 w-full max-w-3xl">
           <div className="grid grid-cols-2 gap-4 p-4 pb-2 w-full">
             <div>
               <label className="hidden" htmlFor="name">

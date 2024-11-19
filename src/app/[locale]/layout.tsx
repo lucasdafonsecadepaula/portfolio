@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import { NextIntlClientProvider } from 'next-intl'
 import {
   getMessages,
