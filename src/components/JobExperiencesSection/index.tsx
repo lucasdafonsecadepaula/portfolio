@@ -80,7 +80,7 @@ function JobWrapper({
           </div>
         </div>
         <div className="flex flex-col">
-          <p className="text-[24px] font-semibold text-primary-800">
+          <p className="text-[14px] sm:text-[24px] font-semibold text-primary-800">
             {companyDate}
           </p>
         </div>

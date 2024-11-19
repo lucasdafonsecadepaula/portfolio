@@ -49,8 +49,8 @@ export function AnimatedGrid({
         className={twMerge(
           'flex flex-wrap transition-all duration-1000 ease-in-out',
           rows.length === 1
-            ? 'h-[5rem] md:h-[11rem] lg:h-[15rem]'
-            : 'h-[10rem] md:h-[22rem] lg:h-[30rem]',
+            ? 'h-[10rem] md:h-[13rem] lg:h-[15rem]'
+            : 'h-[20rem] md:h-[25rem] lg:h-[30rem]',
         )}
       >
         {rows.map((cols, rowIndex) => {
