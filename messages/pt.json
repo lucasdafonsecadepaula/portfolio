@@ -61,13 +61,7 @@
         },
         "MyStackSection": {
             "title": "Minha Stack",
-            "subtitle": "Comprometido em se manter atualizado com as últimas tendências e técnicas de desenvolvimento.",
-            "reactjs": "React é a biblioteca para interfaces de usuário nativas e web.",
-            "typescript": "O TypeScript estende o JavaScript adicionando tipos à linguagem.",
-            "nextjs": "Usado por algumas das maiores empresas do mundo, o Next.js permite que você crie aplicativos web de alta qualidade com o poder dos componentes React.",
-            "nodejs": "Node.js® é um ambiente de execução JavaScript gratuito, de código aberto e multiplataforma que permite aos desenvolvedores criar servidores, aplicativos da web, ferramentas de linha de comando e scripts.",
-            "aws": "AWS, é uma plataforma de serviços de computação em nuvem oferecida pela Amazon.",
-            "jest": "Jest é um poderoso Framework de Testes em JavaScript com um foco na simplicidade."
+            "subtitle": "Comprometido em se manter atualizado com as últimas tendências e técnicas de desenvolvimento."
         },
         "ContactSection": {
             "title": "Me contate",

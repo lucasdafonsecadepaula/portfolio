@@ -16,11 +16,10 @@ import { useTranslations } from 'next-intl'
 interface StackWrapperProps {
   icon: ReactNode
   title: string
-  body: string
   delay?: number
 }
 
-function StackWrapper({ icon, body, title, delay = 0 }: StackWrapperProps) {
+function StackWrapper({ icon, title, delay = 0 }: StackWrapperProps) {
   return (
     <motion.div
       initial={{ y: 50, opacity: 0 }}
@@ -37,9 +36,6 @@ function StackWrapper({ icon, body, title, delay = 0 }: StackWrapperProps) {
           {title}
         </p>
       </div>
-      <div>
-        <p className="text-[#999999] p-2">{body}</p>
-      </div>
     </motion.div>
   )
 }
@@ -53,17 +49,15 @@ export function MyStackSection() {
       title={t('MyStackSection.title')}
       description={t('MyStackSection.subtitle')}
     >
-      <div className="grid md:grid-cols-2 gap-4 p-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-4 p-4">
         <StackWrapper
           icon={<ReactJsIcon size={40} />}
           title="ReactJS"
-          body={t('MyStackSection.reactjs')}
           delay={0}
         />
         <StackWrapper
           icon={<TypescriptIcon size={40} />}
           title="TypeScript"
-          body={t('MyStackSection.typescript')}
           delay={0.1}
         />
         <StackWrapper
@@ -73,13 +67,11 @@ export function MyStackSection() {
             </div>
           }
           title="NextJS"
-          body={t('MyStackSection.nextjs')}
           delay={0.2}
         />
         <StackWrapper
           icon={<NodeJsIcon size={40} />}
           title="NodeJS"
-          body={t('MyStackSection.nodejs')}
           delay={0.3}
         />
         <StackWrapper
@@ -89,15 +81,9 @@ export function MyStackSection() {
             </div>
           }
           title="AWS"
-          body={t('MyStackSection.aws')}
           delay={0.4}
         />
-        <StackWrapper
-          icon={<JestIcon size={40} />}
-          title="Jest"
-          body={t('MyStackSection.jest')}
-          delay={0.5}
-        />
+        <StackWrapper icon={<JestIcon size={40} />} title="Jest" delay={0.5} />
       </div>
     </Section>
   )

@@ -61,13 +61,7 @@
         },
         "MyStackSection": {
             "title": "My Stack",
-            "subtitle": "Committed to staying updated with the latest trends and techniques in development.",
-            "reactjs": "React is a library for building native and web user interfaces.",
-            "typescript": "TypeScript extends JavaScript by adding types to the language.",
-            "nextjs": "Used by some of the world's largest companies, Next.js allows you to build high-quality web apps with the power of React components.",
-            "nodejs": "Node.js® is a free, open-source, cross-platform JavaScript runtime environment for building servers, web apps, CLI tools, and scripts.",
-            "aws": "AWS is a cloud computing platform offered by Amazon.",
-            "jest": "Jest is a powerful JavaScript testing framework with a focus on simplicity."
+            "subtitle": "Committed to staying updated with the latest trends and techniques in development."
         },
         "ContactSection": {
             "title": "Contact me",
