@@ -16,7 +16,9 @@ export default function Home({ params: { locale } }: Props) {
   return (
     <div className="2xl:px-[8vw]">
       <Hero />
-      <TimelineSection />
+      <div className="overflow-y-hidden">
+        <TimelineSection />
+      </div>
       <JobExperiencesSection />
       <MyStackSection />
       <ContactSection />

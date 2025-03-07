@@ -1,12 +1,11 @@
 'use client'
+import { Link, usePathname } from '@/src/i18n/routing'
 import { motion } from 'framer-motion'
+import { HomeIcon, MailIcon } from 'lucide-react'
+import { useTranslations } from 'next-intl'
+import { IconButton } from '../buttons/Icon'
 import { ArrowUp } from './components/ArrowUp'
 import { TopLeftImage } from './components/TopLeftImage'
-import { IconButton } from '../buttons/Icon'
-import { SchoolIcon } from '../icons'
-import { useTranslations } from 'next-intl'
-import { Link, usePathname } from '@/src/i18n/routing'
-import { FileText, HomeIcon, MailIcon } from 'lucide-react'
 
 export function LeftSideBar() {
   const t = useTranslations('HomePage')
@@ -35,22 +34,22 @@ export function LeftSideBar() {
                   <HomeIcon size={28} />
                 </IconButton>
               </Link>
-              <Link href="/curriculum">
+              {/* <Link href="/curriculum">
                 <IconButton
                   isActive={pathname === '/curriculum'}
                   tooltipText={t('LeftSideBar.Tooltip.Curriculum')}
                 >
                   <FileText size={28} />
                 </IconButton>
-              </Link>
-              <Link href="/articles">
+              </Link> */}
+              {/* <Link href="/articles">
                 <IconButton
                   isActive={pathname === '/articles'}
                   tooltipText={t('LeftSideBar.Tooltip.Articles')}
                 >
                   <SchoolIcon size={28} />
                 </IconButton>
-              </Link>
+              </Link> */}
 
               <Link href="/#contact">
                 <IconButton
