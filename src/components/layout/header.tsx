@@ -9,7 +9,7 @@ import { useState } from 'react'
 
 const LanguageToggle = () => {
   const router = useRouter()
-  const pathname = usePathname()
+  const pathname = usePathname() ?? ''
   const currentLocale = pathname.startsWith('/en') ? 'en' : 'pt'
 
   const toggleLanguage = () => {
@@ -32,7 +32,7 @@ export function Header() {
   const t = useTranslations('Header')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const router = useRouter()
-  const pathname = usePathname()
+  const pathname = usePathname() ?? ''
 
   return (
     <motion.header

@@ -2,6 +2,7 @@ import { Footer } from '@/components/layout/footer'
 import { Header } from '@/components/layout/header'
 import { ThemeProvider } from '@/components/theme-provider'
 import { routing } from '@/i18n/routing'
+import type { Metadata } from 'next'
 import { NextIntlClientProvider, hasLocale } from 'next-intl'
 import { Cairo, Cuprum } from 'next/font/google'
 import { notFound } from 'next/navigation'
@@ -19,28 +20,34 @@ const cairo = Cairo({
   variable: '--font-cairo',
 })
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     default: 'Lucas de Paula - Fullstack Software Developer',
     template: '%s | Lucas de Paula',
   },
   description:
-    'Apple-inspired design portfolio showcasing innovative and minimalist creative solutions',
+    'Explore the fullstack portfolio of Lucas de Paula, a software developer with expertise in crafting scalable web and mobile applications. From real-time dashboards to UX-focused platforms, discover how design and engineering meet.',
   keywords: [
-    'creative agency',
-    'design portfolio',
-    'minimalist design',
-    'apple-inspired',
+    'fullstack developer',
+    'software engineer',
+    'web developer portfolio',
+    'UI/UX developer',
+    'frontend engineer',
+    'backend developer',
+    'React developer',
+    'Node.js developer',
+    'developer portfolio',
+    'real-time applications',
   ],
-  authors: [{ name: 'Your Name' }],
-  creator: 'Your Name',
-  publisher: 'Your Name',
+  authors: [{ name: 'Lucas de Paula' }],
+  creator: 'Lucas de Paula',
+  publisher: 'Lucas de Paula',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://yourdomain.com'),
+  metadataBase: new URL('https://lucasdafonsecadepaula.vercel.app/'),
   alternates: {
     canonical: '/',
     languages: {
@@ -51,12 +58,12 @@ export const metadata = {
   openGraph: {
     title: 'Lucas de Paula - Fullstack Software Developer',
     description:
-      'Apple-inspired design portfolio showcasing innovative and minimalist creative solutions',
-    url: 'https://yourdomain.com',
+      'Fullstack portfolio of Lucas de Paula. Explore cutting-edge web and mobile development projects, technical insights, and real-world solutions built with modern technologies.',
+    url: 'https://lucasdafonsecadepaula.vercel.app/',
     siteName: 'Lucas de Paula - Fullstack Software Developer',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Lucas de Paula - Fullstack Software Developer',
@@ -69,9 +76,9 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Lucas de Paula - Fullstack Software Developer',
     description:
-      'Apple-inspired design portfolio showcasing innovative and minimalist creative solutions',
-    images: ['/twitter-image.jpg'],
-    creator: '@yourtwitter',
+      'Discover the portfolio of Lucas de Paula: innovative fullstack applications, intuitive interfaces, and high-performance solutions.',
+    images: ['/twitter-image.png'],
+    creator: '@lucasdepaula_',
   },
   robots: {
     index: true,
@@ -85,7 +92,7 @@ export const metadata = {
     },
   },
   verification: {
-    google: 'your-google-site-verification',
+    google: 'rtA57NLk3WUK1YrOBcpYX1AwgeTC8ZJQT4DqpPH9414',
   },
 }
 

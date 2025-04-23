@@ -95,5 +95,10 @@
   "Curriculum": {
     "title": "Curriculum Vitae"
   },
+  "Manifest": {
+    "name": "Lucas de Paula - Portfolio",
+    "shortName": "Lucas Portfolio",
+    "description": "Portfolio showcasing my work as a software developer"
+  },
   "locale": "en"
 }

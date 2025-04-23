@@ -10,14 +10,14 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
+import emailjs from '@emailjs/browser'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
-import { useState, useRef } from 'react'
+import { useRef, useState } from 'react'
 import { useForm } from 'react-hook-form'
-import * as z from 'zod'
-import emailjs from '@emailjs/browser'
 import { toast } from 'sonner'
+import * as z from 'zod'
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -41,9 +41,10 @@ export function ContactFormSection() {
     },
   })
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true)
-    
+
     if (!formRef.current) return
 
     emailjs
@@ -84,9 +85,9 @@ export function ContactFormSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <Form {...form}>
-            <form 
+            <form
               ref={formRef}
-              onSubmit={form.handleSubmit(onSubmit)} 
+              onSubmit={form.handleSubmit(onSubmit)}
               className="space-y-6"
             >
               <FormField
