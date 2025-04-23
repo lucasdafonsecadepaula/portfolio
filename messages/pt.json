@@ -1,0 +1,106 @@
+{
+  "HomePage": {
+    "title": "Olá mundo!",
+    "about": "Ir para a página sobre"
+  },
+  "Hero": {
+    "title": "Transformando Ideias em Soluções Web",
+    "title-last-word": "Escaláveis",
+    "description": "Sou Lucas de Paula — um desenvolvedor com experiência em diversos setores. Crio aplicações focadas no usuário que entregam impacto real. Vamos trabalhar juntos e dar vida à sua visão.",
+    "getInTouch": "Entre em Contato",
+    "learnMore": "Saiba mais"
+  },
+  "Services": {
+    "title": "Soluções completas para suas necessidades digitais",
+    "subtitle": "De interfaces envolventes a sistemas escaláveis, ofereço soluções completas que alinham desempenho, design e experiência do usuário.",
+    "services": {
+      "responsiveDesign": {
+        "title": "💻 Design Responsivo para Todos os Dispositivos",
+        "description": "Interfaces adaptadas a diferentes tamanhos de tela, garantindo navegação suave e acessível em qualquer dispositivo."
+      },
+      "backendSolutions": {
+        "title": "⚙️ Soluções Back-End Robustas para Escalabilidade",
+        "description": "Arquiteturas eficientes e escaláveis que suportam seu crescimento sem comprometer o desempenho."
+      },
+      "performance": {
+        "title": "🚀 Otimização de Performance",
+        "description": "Melhorias focadas em velocidade e tempo de carregamento, reduzindo o tempo de espera e aumentando a satisfação do usuário."
+      },
+      "uxui": {
+        "title": "🎨 Melhorias e Redesign UX/UI",
+        "description": "Análise de usabilidade, fluxos mais intuitivos e interfaces que realmente ajudam os usuários a completar suas tarefas com facilidade."
+      },
+      "webApps": {
+        "title": "🧩 Aplicações Web Personalizadas",
+        "description": "Soluções web sob medida para seu negócio. De MVPs a aplicações completas, focadas em qualidade e agilidade."
+      },
+      "refactoring": {
+        "title": "🧹 Refatoração de Código & Otimização de Performance",
+        "description": "Reestruturo código legado, elimino gargalos e aplico melhores práticas para garantir manutenibilidade e desempenho."
+      }
+    }
+  },
+  "About": {
+    "title": "Sobre Mim",
+    "subtitle": "Desenvolvedor Frontend com Visão de Produto",
+    "bio": [
+      "Olá! Sou Lucas de Paula, um desenvolvedor front-end apaixonado por transformar ideias em experiências digitais funcionais, acessíveis e escaláveis.",
+      "Ao longo da minha carreira, trabalhei em projetos para empresas de fintech, energia, saúde e tecnologia. Combino desempenho, usabilidade e design para entregar soluções que funcionam efetivamente — tanto para os usuários finais quanto para as equipes que mantêm o produto.",
+      "Além da programação, tenho um forte interesse em UX/UI e arquitetura de software. Prospero em equipes colaborativas, mas também me sinto confortável em assumir responsabilidades e tomar decisões técnicas quando necessário.",
+      "Se você está procurando alguém que entende tanto a interface quanto a lógica subjacente, vamos conversar."
+    ]
+  },
+  "Portfolio": {
+    "title": "Designs que Contam Histórias",
+    "subtitle": "Explore minha galeria de interfaces criadas no Figma — projetos que combinam clareza, elegância e propósito em cada detalhe.",
+    "explore": "Explorar no Figma"
+  },
+  "Metadata": {
+    "title": "Agência Criativa Minimalista",
+    "description": "Portfólio de design inspirado na Apple, mostrando soluções criativas inovadoras e minimalistas"
+  },
+  "Header": {
+    "curriculum": "Currículo",
+    "contactMe": "Entre em Contato"
+  },
+  "Timeline": {
+    "title": "Minha Jornada",
+    "subtitle": "A evolução através dos anos",
+    "descriptions": {
+      "smartnx": "Atuei no desenvolvimento da plataforma SaaS NxSuite, especializada em atendimento omnichannel com chatbots. Fui responsável pela criação de uma interface dinâmica em React JS com WebSocket para suporte em tempo real, proporcionando uma experiência fluida para operadores e clientes. Liderei integrações com APIs externas, como VTEX, e desenvolvi painéis de dados escaláveis com foco em performance. Refatorei partes críticas da base de código utilizando Atomic Design, princípios funcionais e boas práticas como DRY e KISS. Também identifiquei e corrigi vulnerabilidades, aprimorando a segurança e estabilidade da aplicação.",
+      "spdata": "Atuei como desenvolvedor e líder front-end em dois sistemas voltados à gestão hospitalar, utilizando Vue.js e integração com APIs governamentais. Desenvolvi interfaces robustas para ambientes internos de alta confiabilidade, com foco em escalabilidade e clareza de informações. Colaborei na definição de arquitetura, mentoria técnica da equipe e na padronização de componentes reutilizáveis. O projeto exigiu atenção especial à conformidade com normas técnicas e à experiência dos usuários em ambientes críticos.",
+      "axis": "Contribuí em projetos internos da Mobfintech com foco na criação de dashboards interativos em tempo real, utilizando React e TypeScript. Desenvolvi integrações com APIs de pagamento, incluindo suporte a transações via Pix e geração de QR Codes. Trabalhei na estruturação de bibliotecas internas, padronização de código e implementação de componentes performáticos e acessíveis. As soluções entregues facilitaram a análise de dados em larga escala e a tomada de decisão por parte dos usuários finais.",
+      "versatus": "Liderei o desenvolvimento front-end do projeto Kosen Energy, uma solução para análise e precificação energética baseada em dados meteorológicos. Criei uma arquitetura de componentes desacoplada para geração dinâmica de relatórios, filtros e gráficos interativos. Além do desenvolvimento técnico com foco em desempenho, participei ativamente das decisões de UX, aprimorando fluxos de uso e interfaces. As melhorias propostas elevaram significativamente a navegabilidade e eficiência da plataforma."
+    }
+  },
+  "Contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Adoraríamos ouvir de você. Preencha o formulário abaixo e entraremos em contato o mais breve possível.",
+    "form": {
+      "name": "Nome",
+      "email": "E-mail",
+      "message": "Mensagem",
+      "namePlaceholder": "João Silva",
+      "emailPlaceholder": "joao@exemplo.com",
+      "messagePlaceholder": "Conte-nos sobre seu projeto...",
+      "submit": "Enviar Mensagem",
+      "sending": "Enviando...",
+      "success": "Obrigado pela sua mensagem. Entraremos em contato em breve!"
+    }
+  },
+  "Footer": {
+    "links": [
+      "Sobre",
+      "Trabalhos",
+      "Serviços",
+      "Contato",
+      "Privacidade",
+      "Termos"
+    ],
+    "copyright": "Desenvolvido por Lucas de Paula"
+  },
+  "Curriculum": {
+    "title": "Currículo"
+  },
+  "locale": "pt"
+}
