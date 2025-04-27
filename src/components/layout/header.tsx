@@ -1,3 +1,4 @@
+'use client'
 import { Menu, X } from 'lucide-react'
 import * as motion from 'motion/react-client'
 import { useTranslations } from 'next-intl'

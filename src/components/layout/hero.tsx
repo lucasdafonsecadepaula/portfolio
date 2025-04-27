@@ -1,10 +1,10 @@
 import { cn } from '@/lib/utils'
-import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 import * as motion from 'motion/react-client'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Underline } from '../ui/underline'
+import { HeroLottie } from './hero-client'
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -160,13 +160,7 @@ const HeroImage = () => {
       transition={{ duration: 0.8, delay: 0.6 }}
     >
       <div className="relative hidden lg:block">
-        <DotLottieReact
-          width={600}
-          height={600}
-          src="/hero.lottie"
-          loop
-          autoplay
-        />
+        <HeroLottie />
       </div>
     </motion.div>
   )
