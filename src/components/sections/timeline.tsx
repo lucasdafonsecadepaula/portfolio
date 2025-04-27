@@ -1,200 +1,10 @@
 'use client'
-import { AnimatePresence, motion, useInView } from 'motion/react'
+import { motion, useInView } from 'motion/react'
 import { useTranslations } from 'next-intl'
-import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
-
-// Animation variants
-const container = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.05,
-    },
-  },
-  exit: {
-    opacity: 0,
-    transition: {
-      staggerChildren: 0.03,
-      staggerDirection: -1,
-    },
-  },
-}
-
-const letter = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -20 },
-}
-
-// Timeline data with added colors and background patterns
-const timelineData = [
-  {
-    year: '2022',
-    company: 'SmartNX',
-    companyColor: 'text-primary',
-    bgPattern: '/smartnx-bg.png',
-    descriptionKey: 'smartnx',
-    images: ['/smartnx-screen-1.png', '/smartnx-screen-2.png'],
-  },
-  {
-    year: '2023',
-    company: 'SPDATA',
-    companyColor: 'text-[#00969E]',
-    bgPattern: '/spdata-bg.png',
-    descriptionKey: 'spdata',
-    images: ['/spdata-screen-1.png', '/spdata-screen-2.png'],
-  },
-  {
-    year: '2024',
-    company: 'Axis Mobfintech',
-    companyColor: 'text-[#FE5300]',
-    bgPattern: '/axis-bg.png',
-    descriptionKey: 'axis',
-    images: ['/axis-screen-1.png', '/axis-screen-2.png'],
-  },
-  {
-    year: '2025',
-    company: 'Versatus',
-    companyColor: 'text-green-500',
-    bgPattern: '/kosen-bg.png',
-    descriptionKey: 'versatus',
-    images: ['/kosen-screen-1.png', '/kosen-screen-2.png'],
-  },
-]
-
-// Animated text component for years and companies with dynamic color
-const AnimatedText = ({
-  text,
-  className,
-}: {
-  text: string
-  className?: string
-}) => (
-  <AnimatePresence mode="wait">
-    <motion.div
-      key={text}
-      className={`flex tracking-wide ${className || ''}`}
-      variants={container}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-    >
-      {text.split('').map((char, i) => (
-        <motion.span key={i} variants={letter} className="inline-block">
-          {char === ' ' ? '\u00A0' : char}
-        </motion.span>
-      ))}
-    </motion.div>
-  </AnimatePresence>
-)
-
-// Timeline content component
-const TimelineContent = ({ activeIndex }: { activeIndex: number }) => {
-  const t = useTranslations('Timeline')
-  const currentData = timelineData[activeIndex]
-
-  return (
-    <div className="w-full flex flex-col md:flex-row justify-between gap-4 md:gap-8 lg:gap-16 px-4 md:px-0">
-      {/* Text Column - Vertical layout with year, company, description */}
-      <div className="w-full md:w-1/2 flex flex-col p-4 md:p-8">
-        {/* Year with outline text */}
-        <div className="mb-2 md:mb-6">
-          <span
-            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-transparent tracking-tighter"
-            style={{
-              WebkitTextStroke: '1.5px rgb(156 163 175)',
-            }}
-          >
-            <AnimatedText text={currentData.year} />
-          </span>
-        </div>
-
-        {/* Company name with dynamic color */}
-        <div className="mb-4 md:mb-10">
-          <h4
-            className={`text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight ${currentData.companyColor}`}
-          >
-            <AnimatedText text={currentData.company} />
-          </h4>
-        </div>
-
-        {/* Description */}
-        <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed tracking-wide">
-          {t(`descriptions.${currentData.descriptionKey}`)}
-        </p>
-      </div>
-
-      {/* Images Column - Two images stacked vertically */}
-      <div className="w-full md:w-1/2 flex flex-col gap-4 md:gap-8 p-4 md:p-8 mb-8 md:mb-16">
-        {currentData.images.map((image, index) => (
-          <div
-            key={index}
-            className="relative overflow-hidden rounded-xl shadow-xl transition-all duration-300 hover:shadow-2xl aspect-[16/9] h-[200px] sm:h-[250px] md:h-[300px]"
-          >
-            <Image
-              src={image}
-              alt={`${currentData.company} project image ${index + 1}`}
-              fill
-              className="object-cover rounded-xl"
-              priority={index === 0}
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
-
-// Mobile Timeline Item component
-const MobileTimelineItem = ({ data }: { data: (typeof timelineData)[0] }) => {
-  const t = useTranslations('Timeline')
-
-  return (
-    <div className="w-full flex flex-col gap-6 p-6 border-b border-border last:border-b-0">
-      {/* Year and Company Header */}
-      <div className="flex flex-col gap-2">
-        <span
-          className="text-4xl font-bold text-transparent tracking-tighter"
-          style={{
-            WebkitTextStroke: '1.5px rgb(156 163 175)',
-          }}
-        >
-          {data.year}
-        </span>
-        <h4
-          className={`text-3xl font-bold tracking-tight ${data.companyColor}`}
-        >
-          {data.company}
-        </h4>
-      </div>
-
-      {/* Description */}
-      <p className="text-base text-muted-foreground leading-relaxed">
-        {t(`descriptions.${data.descriptionKey}`)}
-      </p>
-
-      {/* Images */}
-      <div className="flex flex-col gap-4">
-        {data.images.map((image, index) => (
-          <div
-            key={index}
-            className="relative overflow-hidden rounded-xl shadow-lg aspect-[16/9] h-[200px]"
-          >
-            <Image
-              src={image}
-              alt={`${data.company} project image ${index + 1}`}
-              fill
-              className="object-cover rounded-xl"
-              priority={index === 0}
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
+import { timelineData } from '@/data/timeline'
+import { TimelineContent } from './timeline-content'
+import { MobileTimelineItem } from './mobile-timeline-item'
 
 export function TimelineSection() {
   const t = useTranslations('Timeline')
@@ -246,9 +56,7 @@ export function TimelineSection() {
       <div className="md:hidden mt-16">
         <div className="text-center mb-8 px-4">
           <h2 className="text-2xl font-bold text-foreground">{t('title')}</h2>
-          <p className="mt-2 text-base text-muted-foreground">
-            {t('subtitle')}
-          </p>
+          <p className="mt-2 text-base text-muted-foreground">{t('subtitle')}</p>
         </div>
 
         <div className="flex flex-col">
@@ -294,7 +102,7 @@ export function TimelineSection() {
                   </p>
                 </motion.div>
 
-                <TimelineContent activeIndex={activeIndex} />
+                <TimelineContent currentData={timelineData[activeIndex]} />
               </div>
 
               {/* Right sidebar */}
