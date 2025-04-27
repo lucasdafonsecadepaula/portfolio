@@ -1,7 +1,5 @@
-'use client'
-
 import { Card, CardContent } from '@/components/ui/card'
-import { motion } from 'framer-motion'
+import * as motion from 'motion/react-client'
 import { useTranslations } from 'next-intl'
 
 export function ServicesSection() {

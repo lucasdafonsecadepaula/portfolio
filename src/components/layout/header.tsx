@@ -1,11 +1,15 @@
-'use client'
-import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
+import * as motion from 'motion/react-client'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useState } from 'react'
+import {
+  HeaderContactMe,
+  HeaderDesktopNavigation,
+  HeaderLogo,
+} from './header-ssr'
 
 const LanguageToggle = () => {
   const router = useRouter()
@@ -45,18 +49,7 @@ export function Header() {
         className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8 bg-background/80 backdrop-blur-md rounded-b-2xl"
         aria-label="Global"
       >
-        <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Me</span>
-            <Image
-              className="h-8 w-auto rounded-full shadow-md ring-1 ring-gray-900/10"
-              src="/profile-image.png"
-              alt="me"
-              width={32}
-              height={32}
-            />
-          </Link>
-        </div>
+        <HeaderLogo />
 
         {/* Mobile menu button */}
         <div className="flex lg:hidden">
@@ -75,47 +68,11 @@ export function Header() {
         </div>
 
         {/* Desktop navigation */}
-        <div className="hidden lg:flex lg:gap-x-12">
-          <Link
-            href="/curriculum"
-            className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
-          >
-            {t('curriculum')}
-          </Link>
-          <Link
-            href="https://www.figma.com/design/nf1uTbPuCtqYPNl81ECWPt/Inpirations?node-id=0-1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
-          >
-            Figma
-          </Link>
-          <Link
-            href="https://github.com/lucasdafonsecadepaula"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
-          >
-            GitHub
-          </Link>
-          <Link
-            href="https://www.linkedin.com/in/lucas-da-fonseca-de-paula/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
-          >
-            LinkedIn
-          </Link>
-        </div>
+        <HeaderDesktopNavigation />
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-4">
           <LanguageToggle />
-          <Link
-            href="#contact"
-            className="text-sm font-medium px-4 py-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
-          >
-            {t('contactMe')}
-          </Link>
+          <HeaderContactMe />
         </div>
       </nav>
 

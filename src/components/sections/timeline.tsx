@@ -1,5 +1,5 @@
 'use client'
-import { AnimatePresence, motion, useInView } from 'framer-motion'
+import { AnimatePresence, motion, useInView } from 'motion/react'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
@@ -148,9 +148,9 @@ const TimelineContent = ({ activeIndex }: { activeIndex: number }) => {
 }
 
 // Mobile Timeline Item component
-const MobileTimelineItem = ({ data }: { data: typeof timelineData[0] }) => {
+const MobileTimelineItem = ({ data }: { data: (typeof timelineData)[0] }) => {
   const t = useTranslations('Timeline')
-  
+
   return (
     <div className="w-full flex flex-col gap-6 p-6 border-b border-border last:border-b-0">
       {/* Year and Company Header */}
@@ -163,7 +163,9 @@ const MobileTimelineItem = ({ data }: { data: typeof timelineData[0] }) => {
         >
           {data.year}
         </span>
-        <h4 className={`text-3xl font-bold tracking-tight ${data.companyColor}`}>
+        <h4
+          className={`text-3xl font-bold tracking-tight ${data.companyColor}`}
+        >
           {data.company}
         </h4>
       </div>
@@ -243,14 +245,12 @@ export function TimelineSection() {
       {/* Mobile Version */}
       <div className="md:hidden mt-16">
         <div className="text-center mb-8 px-4">
-          <h2 className="text-2xl font-bold text-foreground">
-            {t('title')}
-          </h2>
+          <h2 className="text-2xl font-bold text-foreground">{t('title')}</h2>
           <p className="mt-2 text-base text-muted-foreground">
             {t('subtitle')}
           </p>
         </div>
-        
+
         <div className="flex flex-col">
           {timelineData.map((data, index) => (
             <MobileTimelineItem key={index} data={data} />

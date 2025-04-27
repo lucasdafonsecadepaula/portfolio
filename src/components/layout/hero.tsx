@@ -1,7 +1,6 @@
-'use client'
 import { cn } from '@/lib/utils'
 import { DotLottieReact } from '@lottiefiles/dotlottie-react'
-import { motion } from 'framer-motion'
+import * as motion from 'motion/react-client'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -21,7 +20,7 @@ const AnimatedTitle = () => {
   const t = useTranslations('Hero')
   return (
     <motion.h1
-      className="mt-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl tracking-wide"
+      className="mt-6 text-4xl font-bold text-foreground sm:text-5xl md:text-6xl tracking-wide"
       variants={fadeInUp}
       initial="hidden"
       animate="visible"
@@ -161,13 +160,6 @@ const HeroImage = () => {
       transition={{ duration: 0.8, delay: 0.6 }}
     >
       <div className="relative hidden lg:block">
-        <Image
-          src="/profile-image.png"
-          alt="Developer profile"
-          width={600}
-          height={600}
-          className="w-full max-w-[500px] rounded-2xl shadow-xl ring-1 ring-gray-900/10 hidden"
-        />
         <DotLottieReact
           width={600}
           height={600}

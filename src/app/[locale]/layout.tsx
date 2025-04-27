@@ -69,7 +69,7 @@ export const metadata: Metadata = {
         alt: 'Lucas de Paula - Fullstack Software Developer',
       },
     ],
-    locale: 'en_US',
+    locale: 'pt_BR',
     type: 'website',
   },
   twitter: {
@@ -103,11 +103,12 @@ export default async function RootLayout({
   children: React.ReactNode
   params: Promise<{ locale: string }>
 }) {
-  // Ensure that the incoming `locale` is valid
   const { locale } = await params
+
   if (!hasLocale(routing.locales, locale)) {
     notFound()
   }
+
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
