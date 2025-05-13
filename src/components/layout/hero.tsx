@@ -1,10 +1,10 @@
 import { cn } from '@/lib/utils'
+import Spline from '@splinetool/react-spline/next'
 import * as motion from 'motion/react-client'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Underline } from '../ui/underline'
-import { HeroLottie } from './hero-client'
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -16,7 +16,7 @@ const fadeInRight = {
   visible: { opacity: 1, x: 0 },
 }
 
-const AnimatedTitle = () => {
+function AnimatedTitle() {
   const t = useTranslations('Hero')
   return (
     <motion.h1
@@ -37,7 +37,7 @@ const AnimatedTitle = () => {
   )
 }
 
-const AnimatedDescription = () => {
+function AnimatedDescription() {
   const t = useTranslations('Hero')
   return (
     <motion.p
@@ -52,7 +52,7 @@ const AnimatedDescription = () => {
   )
 }
 
-const ActionButtons = () => {
+function ActionButtons() {
   const t = useTranslations('Hero')
   return (
     <motion.div
@@ -81,7 +81,7 @@ const ActionButtons = () => {
   )
 }
 
-const CompanyLogos = () => {
+function CompanyLogos() {
   const logos = [
     {
       url: 'arch-logo-2.png',
@@ -139,7 +139,7 @@ const CompanyLogos = () => {
   )
 }
 
-const HeroContent = () => {
+function HeroContent() {
   return (
     <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg lg:flex-shrink-0">
       <AnimatedTitle />
@@ -150,18 +150,17 @@ const HeroContent = () => {
   )
 }
 
-const HeroImage = () => {
+function HeroImage() {
   return (
     <motion.div
-      className="mx-auto mt-12 md:mt-16 lg:mt-0"
+      className="mx-auto mt-12 md:mt-16 lg:mt-0 w-full h-[600px] hidden lg:block flex-1 relative"
       variants={fadeInRight}
       initial="hidden"
       animate="visible"
       transition={{ duration: 0.8, delay: 0.6 }}
     >
-      <div className="relative hidden lg:block">
-        <HeroLottie />
-      </div>
+      <Spline scene="https://prod.spline.design/eLZTl6mEXC57DMXj/scene.splinecode" />
+      <div className="bg-white rounded-full absolute z-50 w-40 h-12 bottom-4 right-0"></div>
     </motion.div>
   )
 }
