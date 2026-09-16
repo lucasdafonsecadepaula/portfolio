@@ -1,18 +1,20 @@
-import { FlatCompat } from '@eslint/eslintrc'
-import { dirname } from 'path'
-import { fileURLToPath } from 'url'
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-})
+import nextCoreWebVitals from 'eslint-config-next/core-web-vitals'
+import prettierConfig from 'eslint-config-prettier'
 
 const eslintConfig = [
-  ...compat.config({
-    extends: ['next/core-web-vitals', 'next/typescript', 'prettier'],
-  }),
+  ...nextCoreWebVitals,
+  prettierConfig,
+  {
+    rules: {
+      // Allow the standard client-mount guard (useEffect + setState) used to
+      // avoid SSR/CSR hydration mismatches, e.g. src/app/[locale]/curriculum/page.tsx
+      'react-hooks/set-state-in-effect': 'off',
+      // Allow refs read inside event handlers created during render (e.g.
+      // form.handleSubmit(onSubmit) in contact-form.tsx), not just top-level
+      // handler bodies.
+      'react-hooks/refs': 'off',
+    },
+  },
 ]
 
 export default eslintConfig
