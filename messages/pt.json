@@ -8,34 +8,39 @@
     "title-last-word": "Escaláveis",
     "description": "Sou Lucas de Paula — um desenvolvedor com experiência em diversos setores. Crio aplicações focadas no usuário que entregam impacto real. Vamos trabalhar juntos e dar vida à sua visão.",
     "getInTouch": "Entre em Contato",
-    "learnMore": "Saiba mais"
+    "learnMore": "Saiba mais",
+    "kicker": "Desenvolvedor Frontend com Visão de Produto",
+    "line1": "Transformando Ideias em",
+    "line2": "Soluções Web",
+    "line3": "Escaláveis",
+    "trustedBy": "Confiado por equipes da"
   },
   "Services": {
     "title": "Soluções completas para suas necessidades digitais",
     "subtitle": "De interfaces envolventes a sistemas escaláveis, ofereço soluções completas que alinham desempenho, design e experiência do usuário.",
     "services": {
       "responsiveDesign": {
-        "title": "💻 Design Responsivo para Todos os Dispositivos",
+        "title": "Design Responsivo para Todos os Dispositivos",
         "description": "Interfaces adaptadas a diferentes tamanhos de tela, garantindo navegação suave e acessível em qualquer dispositivo."
       },
       "backendSolutions": {
-        "title": "⚙️ Soluções Back-End Robustas para Escalabilidade",
+        "title": "Soluções Back-End Robustas para Escalabilidade",
         "description": "Arquiteturas eficientes e escaláveis que suportam seu crescimento sem comprometer o desempenho."
       },
       "performance": {
-        "title": "🚀 Otimização de Performance",
+        "title": "Otimização de Performance",
         "description": "Melhorias focadas em velocidade e tempo de carregamento, reduzindo o tempo de espera e aumentando a satisfação do usuário."
       },
       "uxui": {
-        "title": "🎨 Melhorias e Redesign UX/UI",
+        "title": "Melhorias e Redesign UX/UI",
         "description": "Análise de usabilidade, fluxos mais intuitivos e interfaces que realmente ajudam os usuários a completar suas tarefas com facilidade."
       },
       "webApps": {
-        "title": "🧩 Aplicações Web Personalizadas",
+        "title": "Aplicações Web Personalizadas",
         "description": "Soluções web sob medida para seu negócio. De MVPs a aplicações completas, focadas em qualidade e agilidade."
       },
       "refactoring": {
-        "title": "🧹 Refatoração de Código & Otimização de Performance",
+        "title": "Refatoração de Código & Otimização de Performance",
         "description": "Reestruturo código legado, elimino gargalos e aplico melhores práticas para garantir manutenibilidade e desempenho."
       }
     }
@@ -50,18 +55,15 @@
       "Se você está procurando alguém que entende tanto a interface quanto a lógica subjacente, vamos conversar."
     ]
   },
-  "Portfolio": {
-    "title": "Designs que Contam Histórias",
-    "subtitle": "Explore minha galeria de interfaces criadas no Figma — projetos que combinam clareza, elegância e propósito em cada detalhe.",
-    "explore": "Explorar no Figma"
-  },
   "Metadata": {
     "title": "Agência Criativa Minimalista",
     "description": "Portfólio de design inspirado na Apple, mostrando soluções criativas inovadoras e minimalistas"
   },
   "Header": {
     "curriculum": "Currículo",
-    "contactMe": "Entre em Contato"
+    "contactMe": "Entre em Contato",
+    "menu": "Menu",
+    "close": "Fechar"
   },
   "Timeline": {
     "title": "Minha Jornada",

@@ -7,49 +7,34 @@
   }
 
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 4%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 4%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 4%;
-    --primary: 250 100% 65%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 0 0% 4%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 0 0% 4%;
-    --destructive: 0 84.2% 60.2%;
+    color-scheme: dark;
+    --background: 252 24% 7%;
+    --foreground: 270 20% 96%;
+    --card: 252 18% 11%;
+    --card-foreground: 270 20% 96%;
+    --popover: 252 18% 11%;
+    --popover-foreground: 270 20% 96%;
+    --primary: 272 80% 70%;
+    --primary-foreground: 252 24% 7%;
+    --secondary: 252 16% 14%;
+    --secondary-foreground: 270 20% 96%;
+    --muted: 252 16% 14%;
+    --muted-foreground: 255 10% 68%;
+    --accent: 252 16% 14%;
+    --accent-foreground: 270 20% 96%;
+    --destructive: 0 72% 60%;
     --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 250 100% 65%;
-    --radius: 0.5rem;
-  }
+    --border: 252 12% 20%;
+    --input: 252 12% 22%;
+    --ring: 272 80% 70%;
+    --radius: 0.75rem;
 
-  /* .dark {
-    --background: 0 0% 4%;
-    --foreground: 210 40% 98%;
-    --card: 0 0% 4%;
-    --card-foreground: 210 40% 98%;
-    --popover: 0 0% 4%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 0 0% 4%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
-  } */
+    --surface-2: oklch(0.24 0.02 282);
+    --line: oklch(1 0 0 / 0.09);
+    --line-strong: oklch(1 0 0 / 0.16);
+    --violet: oklch(0.72 0.18 302);
+    --cyan: oklch(0.78 0.14 199);
+  }
 }
 
 @layer base {
@@ -63,61 +48,91 @@
 }
 
 .apple-button {
-  @apply px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold transition-all duration-300 ease-in-out hover:bg-primary/90;
+  @apply inline-flex items-center justify-center gap-3 rounded-full bg-foreground px-8 py-5 text-base font-bold text-background transition-all duration-300 hover:bg-foreground/90;
 }
 
-.section-title {
-  @apply text-4xl font-bold mb-8 text-center text-foreground;
+.grad-text {
+  background: linear-gradient(100deg, var(--violet), var(--cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-.text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600;
+.eyebrow {
+  @apply flex items-center gap-2.5 font-mono text-[13px] font-medium uppercase tracking-[0.08em];
+  color: var(--violet);
 }
-
-.hover-lift {
-  @apply transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg;
-}
-
-.perspective {
-  perspective: 1000px;
-}
-
-.transform-style-preserve-3d {
-  transform-style: preserve-3d;
-}
-
-.rotate-y-180 {
-  transform: rotateY(180deg);
-}
-
-.backface-hidden {
-  backface-visibility: hidden;
-}
-
-.accent-shard:after {  
+.eyebrow::before {
   content: "";
-  height: 70px;
-  width: 1px;  
-  position: absolute;  
-  left: -1px;
-  top: 65%;
-  transition: top, opacity;
-  transition-duration: 600ms;
-  transition-timing-function: ease;
-  background: linear-gradient(
-    transparent,
-    hsl(var(--primary)),
-    transparent
-  );
-  opacity: 0;
+  width: 24px;
+  height: 1px;
+  background: var(--violet);
 }
 
-.accent-shard:after {  
-  top: 65%;
-  opacity: 0;
+/* Orb: one glow anchored in the page layout; PageOrb moves it between sections. */
+.orb {
+  position: absolute;
+  z-index: 0;
+  top: -160px;
+  left: -120px;
+  width: 560px;
+  height: 560px;
+  border-radius: 9999px;
+  background: var(--violet);
+  filter: blur(90px);
+  opacity: 0.5;
+  pointer-events: none;
 }
 
-.accent-shard:hover:after {
-  top: 25%;
-  opacity: 1;
+/* Hero grid + circuit traces */
+.grid-overlay {
+  background-image: linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 30% 40%, black 30%, transparent 90%);
+  mask-image: radial-gradient(ellipse 80% 70% at 30% 40%, black 30%, transparent 90%);
+  animation: gridBreathe 8s ease-in-out infinite;
+}
+.circuit-line { stroke: var(--line-strong); stroke-width: 1; fill: none; }
+.circuit-pulse {
+  fill: none;
+  stroke: var(--cyan);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-dasharray: 8 460;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 5px var(--cyan));
+  animation: circuitFlow 4.4s linear infinite;
+}
+.circuit-pulse.violet { stroke: var(--violet); filter: drop-shadow(0 0 5px var(--violet)); }
+.circuit-node { fill: currentColor; opacity: 0.35; animation: nodeGlow 3s ease-in-out infinite; }
+.circuit-blip { fill: hsl(var(--muted-foreground)); opacity: 0.2; animation: blipPulse 4.5s ease-in-out infinite; }
+
+.scroll-drip::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -20px;
+  width: 1px;
+  height: 20px;
+  background: var(--violet);
+  animation: scrollDrip 2s ease-in-out infinite;
+}
+
+.ticker-track { animation: tickerScroll 26s linear infinite; }
+
+@keyframes gridBreathe { 0%, 100% { opacity: 0.24; } 50% { opacity: 0.38; } }
+@keyframes circuitFlow { to { stroke-dashoffset: -468; } }
+@keyframes nodeGlow {
+  0%, 100% { opacity: 0.28; filter: drop-shadow(0 0 0 transparent); }
+  50% { opacity: 1; filter: drop-shadow(0 0 6px currentColor); }
+}
+@keyframes blipPulse { 0%, 100% { opacity: 0.12; } 50% { opacity: 0.65; } }
+@keyframes scrollDrip { 0% { top: -20px; } 100% { top: 44px; } }
+@keyframes tickerScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .grid-overlay, .circuit-pulse, .circuit-node, .circuit-blip, .scroll-drip::after, .ticker-track {
+    animation: none;
+  }
 }

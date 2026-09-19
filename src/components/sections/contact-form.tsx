@@ -65,23 +65,31 @@ export function ContactFormSection() {
   }
 
   return (
-    <section className="bg-background py-20" id="contact">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id="contact"
+      className="relative border-t border-[var(--line)] bg-card/50 px-5 py-28 sm:px-8 lg:px-12 lg:py-36"
+    >
+      <div className="mx-auto grid max-w-[1180px] items-start gap-14 lg:grid-cols-2 lg:gap-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold text-foreground sm:text-4xl mb-4">
+          <div className="eyebrow mb-5">04 · Contact</div>
+          <h2 className="font-display text-4xl font-bold leading-[1.08] tracking-tight lg:text-[44px]">
             {t('title')}
           </h2>
-          <p className="text-lg text-muted-foreground">{t('subtitle')}</p>
+          <p className="mt-5 max-w-[460px] text-[17px] leading-relaxed text-muted-foreground">
+            {t('subtitle')}
+          </p>
         </motion.div>
         <motion.div
+          className="rounded-[20px] border border-[var(--line)] bg-card p-7 sm:p-10"
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.15 }}
         >
           <Form {...form}>
             <form

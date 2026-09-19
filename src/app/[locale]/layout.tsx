@@ -1,23 +1,29 @@
 import { Footer } from '@/components/layout/footer'
 import { Header } from '@/components/layout/header'
+import { PageOrb } from '@/components/layout/page-orb'
 import { ThemeProvider } from '@/components/theme-provider'
 import { routing } from '@/i18n/routing'
 import type { Metadata } from 'next'
 import { NextIntlClientProvider, hasLocale } from 'next-intl'
-import { Cairo, Cuprum } from 'next/font/google'
+import { Bricolage_Grotesque, JetBrains_Mono, Manrope } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import type React from 'react'
 import '../globals.css'
 
-const cuprum = Cuprum({
+const display = Bricolage_Grotesque({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-cuprum',
+  variable: '--font-display',
 })
-const cairo = Cairo({
+const body = Manrope({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-cairo',
+  variable: '--font-body',
+})
+const mono = JetBrains_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-mono',
 })
 
 export const metadata: Metadata = {
@@ -112,13 +118,16 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={`${cuprum.variable} ${cairo.variable} font-cairo min-h-screen bg-background text-foreground`}
+        className={`${display.variable} ${body.variable} ${mono.variable} relative min-h-screen overflow-x-clip bg-background font-sans text-foreground antialiased`}
       >
         <NextIntlClientProvider>
-          <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <ThemeProvider attribute="class" forcedTheme="dark">
+            <PageOrb />
             <Header />
-            <main>{children}</main>
-            <Footer />
+            <main className="relative z-10">{children}</main>
+            <div className="relative z-10">
+              <Footer />
+            </div>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

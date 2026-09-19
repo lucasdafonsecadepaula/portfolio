@@ -2,101 +2,51 @@ import * as motion from 'motion/react-client'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
-const fadeIn = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-}
-
-const fadeInLeft = {
-  hidden: { opacity: 0, x: -50 },
-  visible: { opacity: 1, x: 0 },
-}
-
-const fadeInRight = {
-  hidden: { opacity: 0, x: 50 },
-  visible: { opacity: 1, x: 0 },
-}
-
-const SectionTitle = () => {
-  const t = useTranslations('About')
-  return (
-    <motion.h2
-      className="text-4xl sm:text-5xl font-black mb-10 sm:mb-12 text-center text-white"
-      variants={fadeIn}
-      initial="hidden"
-      animate="visible"
-      transition={{ duration: 0.8 }}
-    >
-      {t('title')}
-    </motion.h2>
-  )
-}
-
-const ProfileImage = () => {
-  return (
-    <motion.div
-      className="relative mx-auto mb-8 md:mb-0 max-w-md"
-      variants={fadeInLeft}
-      initial="hidden"
-      animate="visible"
-      transition={{ duration: 0.8, delay: 0.2 }}
-    >
-      <Image
-        src="/profile-image.png"
-        alt="Lucas de Paula profile photo"
-        width={480}
-        height={480}
-        className="w-full rounded-3xl shadow-lg p-4"
-      />
-    </motion.div>
-  )
-}
-
-const BioContent = () => {
-  const t = useTranslations('About')
-  const paragraphs = t.raw('bio')
-
-  return (
-    <motion.div
-      variants={fadeInRight}
-      initial="hidden"
-      animate="visible"
-      transition={{ duration: 0.8 }}
-    >
-      <h3 className="text-2xl sm:text-3xl font-bold mb-6 text-white">
-        {t('subtitle')}
-      </h3>
-      {paragraphs.map((paragraph: string, index: number) => (
-        <p
-          key={index}
-          className={`text-gray-300 ${
-            index < paragraphs.length - 1 ? 'mb-4' : ''
-          }`}
-        >
-          {paragraph}
-        </p>
-      ))}
-    </motion.div>
-  )
+const inView = {
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: '-80px' },
+  transition: { duration: 0.8 },
 }
 
 export function AboutMeSection() {
-  return (
-    <section
-      id="about"
-      className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-foreground"
-    >
-      <div className="container mx-auto max-w-6xl">
-        <SectionTitle />
+  const t = useTranslations('About')
+  const paragraphs = t.raw('bio') as string[]
 
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div>
-            <ProfileImage />
+  return (
+    <section id="about" className="relative px-5 py-28 sm:px-8 lg:px-12 lg:py-36">
+      <div className="mx-auto grid max-w-[1180px] items-start gap-14 lg:grid-cols-[380px_1fr] lg:gap-20">
+        <motion.div className="relative mx-auto w-full max-w-[320px] lg:max-w-none" {...inView}>
+          <div
+            aria-hidden="true"
+            className="absolute -inset-6 rounded-[32px] bg-gradient-to-br from-[var(--violet)]/15 to-[var(--cyan)]/15 blur-[30px]"
+          />
+          <Image
+            src="/profile-image.png"
+            alt="Lucas de Paula"
+            width={480}
+            height={600}
+            className="relative aspect-[4/5] w-full rounded-3xl border border-[var(--line-strong)] object-cover"
+          />
+          <div className="absolute -bottom-[18px] left-6 flex items-center gap-2.5 rounded-2xl border border-[var(--line-strong)] bg-[var(--surface-2)] px-[18px] py-3 font-mono text-xs text-muted-foreground">
+            <span className="size-[7px] rounded-full bg-green-400" />
+            Based in Brazil
           </div>
-          <div>
-            <BioContent />
+        </motion.div>
+
+        <motion.div {...inView} transition={{ duration: 0.8, delay: 0.1 }}>
+          <div className="eyebrow mb-5">01 · {t('title')}</div>
+          <h2 className="mb-9 max-w-[520px] font-display text-4xl font-bold leading-[1.08] tracking-tight lg:text-[44px]">
+            {t('subtitle')}
+          </h2>
+          <div className="space-y-5 text-[17px] leading-[1.75] text-muted-foreground">
+            {paragraphs.map((paragraph, i) => (
+              <p key={i} className={i === 0 ? 'text-[19px] text-foreground' : ''}>
+                {paragraph}
+              </p>
+            ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )
