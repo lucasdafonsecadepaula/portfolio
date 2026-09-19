@@ -66,7 +66,7 @@ export function ContactFormSection() {
 
   return (
     <section
-      id="contact"
+      id="contact" data-orb="0.05,320,0.42,1"
       className="relative border-t border-[var(--line)] bg-card/50 px-5 py-28 sm:px-8 lg:px-12 lg:py-36"
     >
       <div className="mx-auto grid max-w-[1180px] items-start gap-14 lg:grid-cols-2 lg:gap-20">

@@ -110,7 +110,7 @@ export function Hero() {
 
   return (
     <section
-      id="hero"
+      id="hero" data-orb="0.04,80,0.5,1"
       className="relative flex min-h-screen flex-col justify-between overflow-hidden"
     >
       <div aria-hidden="true" className="absolute inset-0 z-0 overflow-hidden">

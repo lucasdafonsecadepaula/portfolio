@@ -8,7 +8,7 @@ export function TimelineSection() {
 
   return (
     <section
-      id="experience"
+      id="experience" data-orb="0.02,520,0.4,1.05"
       className="relative border-y border-[var(--line)] bg-card/50 px-5 py-28 sm:px-8 lg:px-12 lg:py-36"
     >
       <div className="mx-auto max-w-[1180px]">

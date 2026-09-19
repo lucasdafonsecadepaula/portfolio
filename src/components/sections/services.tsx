@@ -14,7 +14,7 @@ export function ServicesSection() {
   const t = useTranslations('Services')
 
   return (
-    <section id="services" className="relative px-5 py-28 sm:px-8 lg:px-12 lg:py-36">
+    <section id="services" data-orb="0.9,200,0.34,0.85" className="relative px-5 py-28 sm:px-8 lg:px-12 lg:py-36">
       <div className="mx-auto max-w-[1180px]">
         <div className="mb-16 flex max-w-[640px] flex-col gap-5">
           <div className="eyebrow">03 · Services</div>

@@ -14,7 +14,7 @@ export function AboutMeSection() {
   const paragraphs = t.raw('bio') as string[]
 
   return (
-    <section id="about" className="relative px-5 py-28 sm:px-8 lg:px-12 lg:py-36">
+    <section id="about" data-orb="0.86,260,0.34,0.85" className="relative px-5 py-28 sm:px-8 lg:px-12 lg:py-36">
       <div className="mx-auto grid max-w-[1180px] items-start gap-14 lg:grid-cols-[380px_1fr] lg:gap-20">
         <motion.div className="relative mx-auto w-full max-w-[320px] lg:max-w-none" {...inView}>
           <div

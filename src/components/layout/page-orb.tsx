@@ -2,15 +2,9 @@
 import { motion, useReducedMotion } from 'motion/react'
 import { useEffect, useRef, useState } from 'react'
 
-// x: fraction of page width (orb centre), y: px below the section's top (orb centre)
-const anchors = [
-  { id: 'hero', x: 0.04, y: 80, opacity: 0.5, scale: 1 },
-  { id: 'about', x: 0.86, y: 260, opacity: 0.34, scale: 0.85 },
-  { id: 'experience', x: 0.02, y: 520, opacity: 0.4, scale: 1.05 },
-  { id: 'services', x: 0.9, y: 200, opacity: 0.34, scale: 0.85 },
-  { id: 'contact', x: 0.05, y: 320, opacity: 0.42, scale: 1 },
-]
-
+// Sections register themselves with data-orb="x,y,opacity,scale":
+//   x: fraction of page width (orb centre), y: px below the section's top (orb centre)
+// e.g. <section id="about" data-orb="0.86,260,0.34,0.85">. Document order = travel order.
 const SIZE = 560
 
 type Placement = { x: number; y: number; opacity: number; scale: number }
@@ -21,11 +15,16 @@ export function PageOrb() {
   const current = useRef(-1)
 
   useEffect(() => {
+    const read = () =>
+      Array.from(document.querySelectorAll<HTMLElement>('[data-orb]')).map((el) => {
+        const [x, y, opacity, scale] = el.dataset.orb!.split(',').map(Number)
+        return { el, x, y, opacity, scale }
+      })
+
     const place = (index: number) => {
-      const anchor = anchors[index]
-      const section = document.getElementById(anchor.id)
-      if (!section) return
-      const top = section.getBoundingClientRect().top + window.scrollY
+      const anchor = read()[index]
+      if (!anchor) return
+      const top = anchor.el.getBoundingClientRect().top + window.scrollY
       setPlacement({
         x: anchor.x * document.documentElement.clientWidth - SIZE / 2,
         y: top + anchor.y - SIZE / 2,
@@ -40,9 +39,8 @@ export function PageOrb() {
     const pick = () => {
       const line = window.innerHeight * 0.55
       let index = 0
-      anchors.forEach((anchor, i) => {
-        const el = document.getElementById(anchor.id)
-        if (el && el.getBoundingClientRect().top <= line) index = i
+      read().forEach((anchor, i) => {
+        if (anchor.el.getBoundingClientRect().top <= line) index = i
       })
       if (index !== current.current) place(index)
     }
