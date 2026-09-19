@@ -13,9 +13,12 @@
     "line1": "Transformando Ideias em",
     "line2": "Soluções Web",
     "line3": "Escaláveis",
-    "trustedBy": "Confiado por equipes da"
+    "trustedBy": "Confiado por equipes da",
+    "location": "Brasil",
+    "status": "Aberto a novos projetos"
   },
   "Services": {
+    "eyebrow": "Serviços",
     "title": "Soluções completas para suas necessidades digitais",
     "subtitle": "De interfaces envolventes a sistemas escaláveis, ofereço soluções completas que alinham desempenho, design e experiência do usuário.",
     "services": {
@@ -47,6 +50,22 @@
   },
   "About": {
     "title": "Sobre Mim",
+    "location": "Baseado no Brasil",
+    "photoAlt": "Retrato de Lucas de Paula",
+    "facts": [
+      {
+        "label": "Setores",
+        "value": "Fintech · Energia · Saúde · Tech"
+      },
+      {
+        "label": "Foco",
+        "value": "Front-end · UX/UI · Arquitetura"
+      },
+      {
+        "label": "Base",
+        "value": "Brasil"
+      }
+    ],
     "subtitle": "Desenvolvedor Frontend com Visão de Produto",
     "bio": [
       "Olá! Sou Lucas de Paula, um desenvolvedor front-end apaixonado por transformar ideias em experiências digitais funcionais, acessíveis e escaláveis.",
@@ -56,58 +75,150 @@
     ]
   },
   "Metadata": {
-    "title": "Agência Criativa Minimalista",
-    "description": "Portfólio de design inspirado na Apple, mostrando soluções criativas inovadoras e minimalistas"
+    "title": "Lucas de Paula - Desenvolvedor Frontend com Visão de Produto",
+    "jobTitle": "Desenvolvedor Frontend com Visão de Produto",
+    "description": "Portfólio de Lucas de Paula, desenvolvedor frontend com visão de produto. Construo aplicações web rápidas, acessíveis e focadas no usuário com React e Next.js, de dashboards em tempo real a plataformas completas.",
+    "ogDescription": "Desenvolvedor frontend com visão de produto. Aplicações web rápidas, acessíveis e focadas no usuário com React e Next.js.",
+    "curriculumTitle": "Currículo",
+    "curriculumDescription": "Currículo de Lucas de Paula, desenvolvedor frontend com visão de produto. Veja online ou baixe o PDF.",
+    "keywords": [
+      "desenvolvedor frontend",
+      "desenvolvedor React",
+      "desenvolvedor Next.js",
+      "TypeScript",
+      "product engineer",
+      "portfólio de desenvolvedor",
+      "engenheiro de UI",
+      "Lucas de Paula"
+    ]
+  },
+  "NotFound": {
+    "title": "Página não encontrada",
+    "description": "A página que você procura não existe ou mudou de lugar.",
+    "home": "Voltar ao início",
+    "metaTitle": "404 - Página não encontrada"
+  },
+  "Error": {
+    "title": "Algo quebrou",
+    "description": "Ocorreu um erro inesperado. Tente novamente ou volte ao início.",
+    "retry": "Tentar de novo",
+    "home": "Voltar ao início"
   },
   "Header": {
     "curriculum": "Currículo",
     "contactMe": "Entre em Contato",
     "menu": "Menu",
-    "close": "Fechar"
+    "close": "Fechar",
+    "language": "Idioma"
   },
   "Timeline": {
     "title": "Minha Jornada",
     "subtitle": "A evolução através dos anos",
+    "close": "Fechar visualização",
+    "prev": "Captura anterior",
+    "next": "Próxima captura",
+    "stack": "Tecnologias",
+    "open": "Abrir captura {n} de {company} em tamanho maior",
+    "shotAlt": "Captura de tela do projeto {company}",
     "descriptions": {
       "smartnx": "Atuei no desenvolvimento da plataforma SaaS NxSuite, especializada em atendimento omnichannel com chatbots. Fui responsável pela criação de uma interface dinâmica em React JS com WebSocket para suporte em tempo real, proporcionando uma experiência fluida para operadores e clientes. Liderei integrações com APIs externas, como VTEX, e desenvolvi painéis de dados escaláveis com foco em performance. Refatorei partes críticas da base de código utilizando Atomic Design, princípios funcionais e boas práticas como DRY e KISS. Também identifiquei e corrigi vulnerabilidades, aprimorando a segurança e estabilidade da aplicação.",
       "spdata": "Atuei como desenvolvedor e líder front-end em dois sistemas voltados à gestão hospitalar, utilizando Vue.js e integração com APIs governamentais. Desenvolvi interfaces robustas para ambientes internos de alta confiabilidade, com foco em escalabilidade e clareza de informações. Colaborei na definição de arquitetura, mentoria técnica da equipe e na padronização de componentes reutilizáveis. O projeto exigiu atenção especial à conformidade com normas técnicas e à experiência dos usuários em ambientes críticos.",
       "axis": "Contribuí em projetos internos da Mobfintech com foco na criação de dashboards interativos em tempo real, utilizando React e TypeScript. Desenvolvi integrações com APIs de pagamento, incluindo suporte a transações via Pix e geração de QR Codes. Trabalhei na estruturação de bibliotecas internas, padronização de código e implementação de componentes performáticos e acessíveis. As soluções entregues facilitaram a análise de dados em larga escala e a tomada de decisão por parte dos usuários finais.",
       "versatus": "Liderei o desenvolvimento front-end do projeto Kosen Energy, uma solução para análise e precificação energética baseada em dados meteorológicos. Criei uma arquitetura de componentes desacoplada para geração dinâmica de relatórios, filtros e gráficos interativos. Além do desenvolvimento técnico com foco em desempenho, participei ativamente das decisões de UX, aprimorando fluxos de uso e interfaces. As melhorias propostas elevaram significativamente a navegabilidade e eficiência da plataforma."
-    }
+    },
+    "eyebrow": "Experiência"
   },
   "Contact": {
-    "title": "Entre em Contato",
-    "subtitle": "Adoraríamos ouvir de você. Preencha o formulário abaixo e entraremos em contato o mais breve possível.",
+    "eyebrow": "05 · Contato",
+    "title": "Vamos construir algo que valha o deploy.",
+    "subtitle": "Tem um produto para construir, um time para integrar ou um problema difícil para destrinchar? Me conte. Eu mesmo leio cada mensagem.",
+    "availability": "Aberto a novos projetos",
+    "responseTime": "Resposta em 1 a 2 dias úteis",
+    "direct": "Prefere pular o formulário?",
+    "copyEmail": "Copiar endereço de e-mail",
+    "copied": "E-mail copiado para a área de transferência",
+    "copyFailed": "Não foi possível copiar. O endereço é lucasdafonsecadepaula@gmail.com",
+    "opensNewTab": "abre em nova aba",
     "form": {
       "name": "Nome",
       "email": "E-mail",
       "message": "Mensagem",
-      "namePlaceholder": "João Silva",
-      "emailPlaceholder": "joao@exemplo.com",
-      "messagePlaceholder": "Conte-nos sobre seu projeto...",
-      "submit": "Enviar Mensagem",
+      "namePlaceholder": "Ada Lovelace",
+      "emailPlaceholder": "ada@exemplo.com",
+      "messagePlaceholder": "Conte-me sobre seu projeto...",
+      "submit": "Enviar mensagem",
       "sending": "Enviando...",
-      "success": "Obrigado pela sua mensagem. Entraremos em contato em breve!"
-    }
+      "sent": "Mensagem enviada",
+      "retry": "Tentar novamente",
+      "success": "Obrigado pela sua mensagem. Retorno em breve!",
+      "error": "Algo deu errado e sua mensagem não foi enviada. Tente novamente ou me escreva diretamente por e-mail.",
+      "errors": {
+        "nameMin": "O nome deve ter pelo menos 2 caracteres.",
+        "emailInvalid": "Informe um endereço de e-mail válido.",
+        "messageMin": "A mensagem deve ter pelo menos 10 caracteres."
+      },
+      "characters": "{count} / {max}",
+      "statusSending": "Enviando sua mensagem",
+      "statusInvalid": "Corrija os campos destacados."
+    },
+    "label": "Contato"
   },
   "Footer": {
-    "links": [
-      "Sobre",
-      "Trabalhos",
-      "Serviços",
-      "Contato",
-      "Privacidade",
-      "Termos"
-    ],
-    "copyright": "Desenvolvido por Lucas de Paula"
+    "copyright": "Desenvolvido por Lucas de Paula",
+    "backToTop": "Voltar ao topo"
   },
   "Curriculum": {
-    "title": "Currículo"
+    "title": "Currículo",
+    "eyebrow": "Currículo",
+    "lead": "A história completa em uma página: experiência, stack e formação.",
+    "download": "Baixar PDF",
+    "open": "Abrir em nova aba",
+    "previewTitle": "Pré-visualização do currículo em PDF",
+    "fallback": "Seu navegador não consegue exibir PDFs aqui. Use o botão de download.",
+    "format": "PDF · Português"
   },
   "Manifest": {
     "name": "Lucas de Paula - Portfólio",
     "shortName": "Portfólio Lucas",
     "description": "Portfólio mostrando meu trabalho como desenvolvedor de software"
   },
-  "locale": "pt"
+  "locale": "pt",
+  "Principles": {
+    "number": "03",
+    "eyebrow": "Princípios",
+    "seenIn": "Visto em",
+    "title": "Como eu construo: poucas regras que não abro mão.",
+    "items": {
+      "components": {
+        "title": "Componentes atômicos",
+        "body": "Peças pequenas e reutilizáveis, compostas em estruturas maiores. Estruturo interfaces com Atomic Design e bibliotecas de componentes padronizadas para o time entregar mais rápido e manter consistência.",
+        "seen": [
+          "Atomic Design",
+          "Bibliotecas de componentes",
+          "NxSuite",
+          "Mobfintech"
+        ]
+      },
+      "simple": {
+        "title": "Simples antes de esperto",
+        "body": "Princípios de programação funcional, DRY e KISS. Refatoro código legado e elimino gargalos para que o que vai ao ar seja fácil de ler, mudar e confiar.",
+        "seen": ["Programação funcional", "DRY", "KISS", "Refatoração"]
+      },
+      "accessible": {
+        "title": "Acessível por padrão",
+        "body": "Acessibilidade faz parte do critério de pronto, não de uma revisão posterior. Visualização de dados clara e componentes navegáveis por teclado para ambientes de alta confiabilidade.",
+        "seen": ["Acessibilidade", "React", "TypeScript", "Vue.js"]
+      },
+      "fast": {
+        "title": "Rápido é recurso",
+        "body": "Foco em performance desde a primeira linha: interfaces em tempo real, dashboards com muitos dados e gráficos fluidos, porque esperar é um bug de UX.",
+        "seen": ["Performance", "WebSocket", "Dashboards", "Kosen Energy"]
+      },
+      "product": {
+        "title": "Visão de produto",
+        "body": "Participo das decisões de UX, oriento o time e tomo decisões técnicas quando preciso, para que interface e lógica trabalhem pelo mesmo objetivo.",
+        "seen": ["UX/UI", "Arquitetura", "Mentoria", "Liderança técnica"]
+      }
+    }
+  }
 }

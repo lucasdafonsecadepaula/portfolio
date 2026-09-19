@@ -24,7 +24,9 @@ export function Reveal({
   return (
     <Component
       className={className}
-      variants={reduce ? { hidden: { opacity: 0 }, visible: { opacity: 1 } } : rise}
+      variants={
+        reduce ? { hidden: { opacity: 0 }, visible: { opacity: 1 } } : rise
+      }
       initial="hidden"
       animate={immediate ? 'visible' : undefined}
       whileInView={immediate ? undefined : 'visible'}

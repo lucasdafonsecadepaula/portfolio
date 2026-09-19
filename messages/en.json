@@ -13,9 +13,12 @@
     "line1": "Transforming Ideas Into",
     "line2": "Scalable Web",
     "line3": "Solutions",
-    "trustedBy": "Trusted by teams at"
+    "trustedBy": "Trusted by teams at",
+    "location": "Brazil",
+    "status": "Open to new projects"
   },
   "Services": {
+    "eyebrow": "Services",
     "title": "Comprehensive solutions for your digital needs",
     "subtitle": "From engaging interfaces to scalable systems, I offer complete solutions that align performance, design, and user experience.",
     "services": {
@@ -47,6 +50,22 @@
   },
   "About": {
     "title": "About Me",
+    "location": "Based in Brazil",
+    "photoAlt": "Portrait of Lucas de Paula",
+    "facts": [
+      {
+        "label": "Industries",
+        "value": "Fintech · Energy · Healthcare · Tech"
+      },
+      {
+        "label": "Focus",
+        "value": "Front-end · UX/UI · Architecture"
+      },
+      {
+        "label": "Base",
+        "value": "Brazil"
+      }
+    ],
     "subtitle": "Frontend Developer with Product Vision",
     "bio": [
       "Hello! I'm Lucas de Paula, a front-end developer passionate about transforming ideas into functional, accessible, and scalable digital experiences.",
@@ -56,58 +75,150 @@
     ]
   },
   "Metadata": {
-    "title": "Lucas de Paula - Fullstack Software Developer",
-    "description": "Apple-inspired design portfolio showcasing innovative and minimalist creative solutions"
+    "title": "Lucas de Paula - Frontend Developer with Product Vision",
+    "jobTitle": "Frontend Developer with Product Vision",
+    "description": "Portfolio of Lucas de Paula, a frontend developer with product vision. I build fast, accessible, user-focused web applications with React and Next.js, from real-time dashboards to complete platforms.",
+    "ogDescription": "Frontend developer with product vision. Fast, accessible, user-focused web applications built with React and Next.js.",
+    "curriculumTitle": "Curriculum Vitae",
+    "curriculumDescription": "Résumé of Lucas de Paula, frontend developer with product vision. Preview it online or download the PDF.",
+    "keywords": [
+      "frontend developer",
+      "React developer",
+      "Next.js developer",
+      "TypeScript",
+      "product engineer",
+      "web developer portfolio",
+      "UI engineer",
+      "Lucas de Paula"
+    ]
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has moved somewhere else.",
+    "home": "Back to home",
+    "metaTitle": "404 - Page not found"
+  },
+  "Error": {
+    "title": "Something broke",
+    "description": "An unexpected error happened. You can try again or head back to the start.",
+    "retry": "Try again",
+    "home": "Back to home"
   },
   "Header": {
     "curriculum": "Curriculum",
     "contactMe": "Contact me",
     "menu": "Menu",
-    "close": "Close"
+    "close": "Close",
+    "language": "Language"
   },
   "Timeline": {
     "title": "My Journey",
     "subtitle": "The evolution through the years",
+    "close": "Close preview",
+    "prev": "Previous screenshot",
+    "next": "Next screenshot",
+    "stack": "Technologies",
+    "open": "Open larger screenshot {n} of {company}",
+    "shotAlt": "{company} project screenshot",
     "descriptions": {
       "smartnx": "I worked on the development of the NxSuite SaaS platform, specialized in omnichannel customer service powered by chatbots. I was responsible for building a dynamic interface using React JS and WebSocket to enable real-time support, ensuring a smooth experience for both operators and clients. I led integrations with external APIs such as VTEX and developed scalable data dashboards with a strong focus on performance. I refactored critical parts of the codebase using Atomic Design, functional programming principles, and best practices like DRY and KISS. I also identified and resolved security vulnerabilities, improving the platform's reliability and stability.",
       "spdata": "I served as a front-end developer and team lead on two healthcare-focused systems built with Vue.js, integrating with government APIs. I developed robust interfaces for internal use in high-reliability environments, prioritizing scalability and clear data visualization. I contributed to architectural decisions, provided technical mentorship to the team, and standardized reusable UI components. The project required strict compliance with technical regulations and a user-centered design approach for critical environments.",
       "axis": "I contributed to several internal projects at Mobfintech, focusing on building real-time interactive dashboards using React and TypeScript. I developed integrations with payment APIs, including Pix transaction support and QR code generation. I helped structure internal component libraries, enforced code standardization, and implemented high-performance, accessible components. The delivered solutions significantly improved data analysis workflows and decision-making for end users.",
       "versatus": "I led the front-end development of the Kosen Energy project, a solution for energy pricing and meteorological data analysis. I designed a decoupled component architecture to support dynamic report generation, advanced filtering, and interactive charts. Beyond the technical implementation with a performance-driven mindset, I actively participated in UX decision-making, improving user flows and overall usability. The enhancements significantly boosted the platform's navigation experience and operational efficiency."
-    }
+    },
+    "eyebrow": "Experience"
   },
   "Contact": {
-    "title": "Get in Touch",
-    "subtitle": "We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.",
+    "eyebrow": "05 · Contact",
+    "title": "Let's build something worth shipping.",
+    "subtitle": "Have a product to build, a team to join or a hard problem to untangle? Tell me about it. I read every message myself.",
+    "availability": "Open to new projects",
+    "responseTime": "Response within 1–2 business days",
+    "direct": "Prefer to skip the form?",
+    "copyEmail": "Copy email address",
+    "copied": "Email copied to clipboard",
+    "copyFailed": "Could not copy. The address is lucasdafonsecadepaula@gmail.com",
+    "opensNewTab": "opens in a new tab",
     "form": {
       "name": "Name",
       "email": "Email",
       "message": "Message",
-      "namePlaceholder": "John Doe",
-      "emailPlaceholder": "john@example.com",
-      "messagePlaceholder": "Tell us about your project...",
-      "submit": "Send Message",
+      "namePlaceholder": "Ada Lovelace",
+      "emailPlaceholder": "ada@example.com",
+      "messagePlaceholder": "Tell me about your project...",
+      "submit": "Send message",
       "sending": "Sending...",
-      "success": "Thank you for your message. We'll get back to you soon!"
-    }
+      "sent": "Message sent",
+      "retry": "Try again",
+      "success": "Thank you for your message. I'll get back to you soon!",
+      "error": "Something went wrong and your message was not sent. Please try again or email me directly.",
+      "errors": {
+        "nameMin": "Name must be at least 2 characters.",
+        "emailInvalid": "Please enter a valid email address.",
+        "messageMin": "Message must be at least 10 characters."
+      },
+      "characters": "{count} / {max}",
+      "statusSending": "Sending your message",
+      "statusInvalid": "Please fix the highlighted fields."
+    },
+    "label": "Contact"
   },
   "Footer": {
-    "links": [
-      "About",
-      "Work",
-      "Services",
-      "Contact",
-      "Privacy",
-      "Terms"
-    ],
-    "copyright": "Developed by Lucas de Paula"
+    "copyright": "Developed by Lucas de Paula",
+    "backToTop": "Back to top"
   },
   "Curriculum": {
-    "title": "Curriculum Vitae"
+    "title": "Curriculum Vitae",
+    "eyebrow": "Résumé",
+    "lead": "The full story in one page: experience, stack and education.",
+    "download": "Download PDF",
+    "open": "Open in new tab",
+    "previewTitle": "Curriculum PDF preview",
+    "fallback": "Your browser cannot preview PDFs here. Use the download button instead.",
+    "format": "PDF · English"
   },
   "Manifest": {
     "name": "Lucas de Paula - Portfolio",
     "shortName": "Lucas Portfolio",
     "description": "Portfolio showcasing my work as a software developer"
   },
-  "locale": "en"
+  "locale": "en",
+  "Principles": {
+    "number": "03",
+    "eyebrow": "Principles",
+    "seenIn": "Seen in",
+    "title": "How I build: a few rules I don't bend.",
+    "items": {
+      "components": {
+        "title": "Atomic components",
+        "body": "Small, reusable pieces composed into larger ones. I structure interfaces with Atomic Design and standardized component libraries so teams ship faster and stay consistent.",
+        "seen": [
+          "Atomic Design",
+          "Component libraries",
+          "NxSuite",
+          "Mobfintech"
+        ]
+      },
+      "simple": {
+        "title": "Simple over clever",
+        "body": "Functional programming principles, DRY and KISS. I refactor legacy code and remove bottlenecks so what ships is easy to read, change and trust.",
+        "seen": ["Functional programming", "DRY", "KISS", "Refactoring"]
+      },
+      "accessible": {
+        "title": "Accessible by default",
+        "body": "Accessibility is part of the definition of done, not a later pass. Clear data visualization and keyboard-friendly components for high-reliability environments.",
+        "seen": ["Accessibility", "React", "TypeScript", "Vue.js"]
+      },
+      "fast": {
+        "title": "Fast is a feature",
+        "body": "Performance-driven from the first line: real-time interfaces, data-heavy dashboards and charts that stay smooth, because waiting is a UX bug.",
+        "seen": ["Performance", "WebSocket", "Dashboards", "Kosen Energy"]
+      },
+      "product": {
+        "title": "Product-minded",
+        "body": "I take part in UX decisions, mentor teammates and make technical calls when needed, so the interface and the logic underneath serve the same goal.",
+        "seen": ["UX/UI", "Architecture", "Mentoring", "Team lead"]
+      }
+    }
+  }
 }

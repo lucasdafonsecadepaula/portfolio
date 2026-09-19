@@ -1,5 +1,10 @@
 'use client'
-import { motion, useMotionValue, useReducedMotion, useSpring } from 'motion/react'
+import {
+  motion,
+  useMotionValue,
+  useReducedMotion,
+  useSpring,
+} from 'motion/react'
 import { useRef, type ReactNode } from 'react'
 
 /** Pulls its child toward the cursor. No-op on touch devices and for reduced motion. */
@@ -14,8 +19,16 @@ export function Magnetic({
 }) {
   const ref = useRef<HTMLDivElement>(null)
   const reduce = useReducedMotion()
-  const x = useSpring(useMotionValue(0), { stiffness: 200, damping: 15, mass: 0.2 })
-  const y = useSpring(useMotionValue(0), { stiffness: 200, damping: 15, mass: 0.2 })
+  const x = useSpring(useMotionValue(0), {
+    stiffness: 200,
+    damping: 15,
+    mass: 0.2,
+  })
+  const y = useSpring(useMotionValue(0), {
+    stiffness: 200,
+    damping: 15,
+    mass: 0.2,
+  })
 
   return (
     <motion.div

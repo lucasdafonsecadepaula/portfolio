@@ -1,52 +1,52 @@
-import * as motion from 'motion/react-client'
+import { Reveal } from '@/components/motion/reveal'
 import { useTranslations } from 'next-intl'
+import type { GlyphKey } from './service-glyphs'
+import { ServicesList } from './services-list'
 
-const keys = [
+const keys: GlyphKey[] = [
   'responsiveDesign',
   'backendSolutions',
   'performance',
   'uxui',
   'webApps',
   'refactoring',
-] as const
+]
 
 export function ServicesSection() {
   const t = useTranslations('Services')
+  const items = keys.map((key) => ({
+    key,
+    title: t(`services.${key}.title`),
+    description: t(`services.${key}.description`),
+  }))
 
   return (
-    <section id="services" data-orb="0.9,200,0.34,0.85" className="relative px-5 py-28 sm:px-8 lg:px-12 lg:py-36">
-      <div className="mx-auto max-w-[1180px]">
-        <div className="mb-16 flex max-w-[640px] flex-col gap-5">
-          <div className="eyebrow">03 · Services</div>
-          <h2 className="font-display text-4xl font-bold leading-[1.08] tracking-tight lg:text-[44px]">
-            {t('title')}
-          </h2>
-          <p className="text-[17px] leading-relaxed text-muted-foreground">
-            {t('subtitle')}
-          </p>
-        </div>
-
-        <div className="grid gap-px overflow-hidden rounded-3xl border border-[var(--line)] bg-[var(--line)] md:grid-cols-2 lg:grid-cols-3">
-          {keys.map((key, index) => (
-            <motion.div
-              key={key}
-              className="flex flex-col gap-5 bg-card p-9 transition-colors hover:bg-[var(--surface-2)]"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: (index % 3) * 0.08 }}
-            >
-              <span className="font-mono text-xs tracking-[0.1em] text-[var(--violet)]">
-                {String(index + 1).padStart(2, '0')}
-              </span>
-              <h3 className="text-lg font-bold leading-snug">
-                {t(`services.${key}.title`)}
-              </h3>
-              <p className="text-[14.5px] leading-[1.65] text-muted-foreground">
-                {t(`services.${key}.description`)}
+    <section
+      id="services"
+      data-orb="0.04,240,0.36,0.9"
+      aria-label={t('eyebrow')}
+      className="relative px-5 py-28 sm:px-8 lg:px-12 lg:py-36"
+    >
+      <div className="mx-auto grid max-w-[1180px] gap-14 lg:grid-cols-12 lg:gap-10">
+        <div className="lg:col-span-4">
+          <div className="flex flex-col gap-5 lg:sticky lg:top-32">
+            <Reveal>
+              <div className="eyebrow">04 · {t('eyebrow')}</div>
+            </Reveal>
+            <Reveal delay={0.05}>
+              <h2 className="font-display text-4xl font-bold leading-[1.05] tracking-tight lg:text-[44px]">
+                {t('title')}
+              </h2>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <p className="text-[17px] leading-relaxed text-muted-foreground">
+                {t('subtitle')}
               </p>
-            </motion.div>
-          ))}
+            </Reveal>
+          </div>
+        </div>
+        <div className="lg:col-span-7 lg:col-start-6 lg:pr-12 xl:pr-0">
+          <ServicesList items={items} />
         </div>
       </div>
     </section>
